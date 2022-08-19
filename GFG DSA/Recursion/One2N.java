@@ -1,9 +1,3 @@
-package Recursion;
-
-/**
- * One2N
- */
-public class One2N {
-
+class One2N{
     
 }
