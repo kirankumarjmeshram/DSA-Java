@@ -1,0 +1,6227 @@
+welcome to durgasoft online training
+
+welcome to Data Structures and Algorithms with Java...
+
+K Prakash Babu, 15+ years exp as a trainer..
+
+syllabus:
+---------
+01. Introduction data structures and algorithms
+02. Analysis of algorithms (complexity calculation)
+03. Sample Algorithms and implementations
+04. Array Data Structure
+05. One-D array programs
+06. Two-D array programs
+07. CRUD Operations on Arrays
+08. String Data Structure
+09. String programs
+10. Recursion and its applications
+11. Backtracking
+12. Dynamic Programming
+13. Greedy Algorithms
+14. Sorting Methods
+15. Divide and Conquer Algorithms
+16. Searching Algorithms
+17. Bit manipulations
+18. Linked List data structure (SLL, DLL, CSLL, CDLL)
+19. Stack Data Structure
+20. Queue Data Structure
+21. Hashtable Data Structure
+22. Tree Data Structures (Tree, BT, BST, AVL)
+23. Priority Queues or Heap Data Structure (Heap Sort)
+24. Graph Data Structure
+25. Hashing
+
+
+course -----> DSA with Java
+fees -------> Rs. 999/-
+duration ---> 2 Months
+timings ----> 7am to 8am (mon - fri)
+contact ----> 9246212143 / 8096969696 / 7207212427
+
+
+https://www.youtube.com/watch?v=S49defkVaew&list=PLd3UqWTnYXOlZyyFjock-hBRlal7hbpdL
+
+Core java ----> 9PM ---> 5000/-
+
+https://www.youtube.com/watch?v=iVg8MeY2Zmk&list=PLd3UqWTnYXOnGTZmoby4ZyZtE9mI57Q3l
+
+addition of a new element/object/node at the begining of linked list
+--------------------------------------------------------------------
+
+
+
+addition of a new element/object/node at the ending of linked list
+------------------------------------------------------------------
+
+
+
+
+Print "Hello World" by using Java
+---------------------------------
+class Test
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Hello World");
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Hello World
+
+
+
+
+prime number application:
+-------------------------
+If we are taking any integers, it is said to be prime number if it having only two factors
+
+2 --------> 1, 2 --------> true
+3 --------> 1, 3 --------> true
+4 --------> 1, 2, 4 -----> false
+5 --------> 1, 5 --------> true
+6 --------> 1, 2, 3, 6 --> false
+
+
+class Test
+{
+	static boolean prime1(int n)
+	{
+		int factors = 0;
+		for(int i=1;i<=n;i++)
+		{
+			if(n%i==0)
+				factors++;
+		}
+		return factors==2;
+	}
+	static boolean prime2(int n)
+	{
+		for(int i=2;i<n;i++)
+		{
+			if(n%i==0)
+				return false;
+		}
+		return true;
+	}
+	static boolean prime3(int n,int i)
+	{
+		if(i==1)
+			return true;
+		if(n%i==0)
+			return false;
+		return prime3(n,i-1);
+	}
+	public static void main(String[] args)
+	{
+		for(int i=2;i<=10;i++)
+			System.out.println(i+"\t"+prime1(i)+"\t"+prime2(i)+"\t"+prime3(i,i/2));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+2       true    true    true
+3       true    true    true
+4       false   false   false
+5       true    true    true
+6       false   false   false
+7       true    true    true
+8       false   false   false
+9       false   false   false
+10      false   false   false
+
+
+
+Ex1:
+----
+import java.util.*;
+class Demo
+{
+	int x;
+	void setX(int x){
+		this.x = x;
+	}
+	int getX(){
+		return x;
+	}
+}
+class Test
+{
+	public static void main(String[] args)
+	{
+		Demo obj = new Demo();
+		obj.setX(444);
+		System.out.println(obj.getX());
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+444
+
+Ex2:
+----
+import java.util.*;
+class Demo
+{
+	int x;
+	Demo(int x){
+		this.x = x;
+	}
+	int getX(){
+		return x;
+	}
+}
+class Test
+{
+	public static void main(String[] args)
+	{
+		Demo obj = new Demo(555);
+		System.out.println(obj.getX());
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+555
+
+Ex:
+---
+import java.util.*;
+class Demo
+{
+	int x,y;
+	Demo(int x,int y){
+		this.x = x;
+		this.y = y;
+	}
+	int getX(){
+		return x;
+	}
+	int getY(){
+		return y;
+	}
+}
+class Test
+{
+	public static void main(String[] args)
+	{
+		Demo obj = new Demo(10,20);
+		System.out.println(obj.getX());
+		System.out.println(obj.getY());
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+10
+20
+
+Ex:
+---
+import java.util.*;
+class Point
+{
+	int x,y;
+	Point(int x,int y){
+		this.x = x;
+		this.y = y;
+	}
+	int getX(){
+		return x;
+	}
+	int getY(){
+		return y;
+	}
+}
+class Test
+{
+	public static void main(String[] args)
+	{
+		Point p1 = new Point(10,20);
+		System.out.println(p1.getX());
+		System.out.println(p1.getY());
+
+		Point p2 = new Point(10,11);
+		System.out.println(p2.getX());
+		System.out.println(p2.getY());
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+10
+20
+10
+11
+
+Ex:
+---
+import java.util.*;
+class Point
+{
+	int x,y;
+	Point(int x,int y){
+		this.x = x;
+		this.y = y;
+	}
+	int getX(){
+		return x;
+	}
+	int getY(){
+		return y;
+	}
+}
+class Test
+{
+	public static void main(String[] args)
+	{
+		Point p1 = new Point(10,20);
+		System.out.println(p1);
+
+		Point p2 = new Point(10,11);
+		System.out.println(p2);
+
+		String s = new String("Java");
+		System.out.println(s);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Point@2c7b84de
+Point@3fee733d
+Java
+
+Ex:
+---
+import java.util.*;
+class Point
+{
+	int x,y;
+	Point(int x,int y){
+		this.x = x;
+		this.y = y;
+	}
+	int getX(){
+		return x;
+	}
+	int getY(){
+		return y;
+	}
+	public String toString()
+	{
+		return "("+this.x+", "+this.y+")";		
+	}
+}
+class Test
+{
+	public static void main(String[] args)
+	{
+		Point p1 = new Point(10,20);
+		System.out.println(p1);
+
+		Point p2 = new Point(10,11);
+		System.out.println(p2);
+
+		String s = new String("Java");
+		System.out.println(s);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+(10, 20)
+(10, 11)
+Java
+
+SLL, DLL, CSLL, CDLL, BT, BST, AVL, Demo, -----> print(obj)
+
+public String toString(){
+	return "-----";
+}
+
+Chapter: 01. Introduction data structures and algorithms
+--------------------------------------------------------
+Problem ----> Idea ----> Algorithm ----> Flowchart ----> Program ----> Ouput (solution)
+
+Algorithm:
+----------
+Step by Step process to solve a problem is called as an algorithm.
+
+problem: addition of two numbers
+--------------------------------
+algorithm:
+----------
+				step1: read 'a' value from user as integer
+				step2: read 'b' value from user as integer
+				step3: logic --> c = a + b
+				step4: print the values c as a result
+
+flowchart:
+----------
+digrametic or pictorial representation of an algorithm is called as flow chart.
+
+
+implementation:
+---------------
+import java.util.*;
+class Test
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter a value: ");
+		int a = obj.nextInt();
+		System.out.println("Enter b value: ");
+		int b = obj.nextInt();
+
+		System.out.println(a+b);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter a value:
+10
+Enter b value:
+20
+30
+
+advantages of algorithms:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+==> problem will be simplified.
+==> easy to understand the problem statement.
+==> easy to implement by using any programing language.
+==> we will get a fromat / template / pattern for solving the problems.
+
+properties of algorithms:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+1) every algorithm should take zero of more inputs.
+2) every algorithm should print atleast one output.
+3) deterministic (input ---> output same thing should happend if run again and again)
+4) correct
+5) terminate finate number of steps
+6) efficient (logic should be clear)
+
+types of algorithms:
+~~~~~~~~~~~~~~~~~~~~
+1) simple algorithms
+2) math algorithms
+3) recursive algorithms
+4) divide and conquer algorithms
+5) back tracking algorithms
+6) dynamic programming
+7) greedy algorithsm
+8) searching and sorting algs
+etc
+
+data structures:
+----------------
+Data structure is the concept of organizing the data. data structures are classfied into 2 types
+
+1) linear data structures
+2) non linear data data structures
+
+linear data structures:
+-----------------------
+data, allocation of memory for that data is in continues manner.
+
+Ex:
+	arrays
+	strings
+	linked list
+	stack
+	queue
+	etc
+
+non-linear data structures:
+---------------------------
+data, allocation of memory for that data is random memory allocations.
+
+Ex:
+	trees
+	heaps
+	graphs
+	etc
+
+The following are the basic operations that we can perform on any data structures
+
+1) inserting
+2) deleting
+3) updating
+4) searching
+5) sorting etc
+
+
+ARRAY:
+------
+it is a collection similar type of elements.
+
+Creation / Insert
+Reading 
+Update
+Delete
+
+STRING:
+------
+it is a collection group of characters.
+
+Creation / Insert
+Reading 
+Update
+Delete
+
+LINKED LIST:
+------------
+it is a collection of single or double nodes
+
+SLL, DLL, CSLL, CDLL
+
+insert ----> first, last, location, sorted insertion asc/del
+delete ----> first, last, location, element, elements
+search ----> true or false, index of that element
+
+STACK:
+------
+it is collection of objects, method used in stack LIFO
+
+push
+pop
+peek
+search
+
+QUEUE:
+------
+it is also collection of objects, method used in queue FIFO
+
+insert
+delete
+display etc
+
+TREE:
+-----
+it is a collection of nodes.
+
+TREE, BINARY TREE, BINARY SEARCH TREE, AVL TREES
+
+insert
+delete
+search
+applications
+etc
+
+GRAPH:
+------
+it is a collection of vertices and edges
+
+GRAPH, BFS, DFS, SHORTEST PATH, etc
+
+
+
+approaches to solve any problem:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Theoritical knowlege is essential but it is insufficient to solve the problem. the following are the main approaches to solve any problem in the real word.
+
+1) constraints 
+2) idea generation
+3) complexities analysis
+4) coding
+5) testing
+
+1) constraints 
+--------------
+Given problem constraints are very very imp, first we have to identify all the constraints related to the given problem..
+
+Ex:
+	sorting the data in asc order
+
+	1. ASC order and DESC order
+	2. Number of elements
+	3. Type of elements
+
+2) idea generation
+------------------
+* more if you practice, you will get idea.
+* by practicing you will get a pattern of the problem.
+* easily we can solve unseen problems
+  1. try to simplify task at hand
+  2. few examples (apply)
+  3. think about suitable data structure
+  4. think about similar problem that you solved
+
+3) complexities analysis
+------------------------
+==> finding the solution for a problem is not sufficient.
+==> find a solution which is fast and take less memory.
+==> calcualte time and space complexity of the given alg
+
+4) coding
+----------
+==> if you have all the data, then we can write code
+==> select any programming langauge (JAVA)
+==> select proper IDE
+==> and try to write modular code (functions/methods) [resuability]
+
+5) testing
+----------
+==> after completion of program, validations
+==> apply varies test cases and solve
+
+normal test cases              -----> basic examples
+edge test cases/corner test cases ---> failure or invalid test case
+
+
+0 1 2 3 4
+
+insert 999, at -4th location
+insert 999, at 10th location
+
+Chapter:02. Analysis of algorithms (complexity calculation)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+complexity of an algorithm or program is the amount of time and space required to complete its execution. there are two types of complexities.
+
+1) time complexity T(n) ----> amount of time taken
+2) space complexity S(n) ---> amount of space required
+
+Note: sec, msec, nsec, bits, bytes, kb, mb etc
+
+
+Asymptotic Notations or Asymptotoc Analysis
+-------------------------------------------
+calculating running time and space of any algorithm in mathmetic units of computation is called as asymptotic notations.
+
+1) big-oh notation (O)
+2) omega notation (W)
+3) theta notation (0)
+
+
+complexity analysis of an algorithm
+------------------------------------
+worst case complexity -------> max steps required by al alg ------> O
+best case complecity --------> min steps required by an alg ------> W
+average case complexity -----> avg steps required by an alg ------> 0
+
+
+Ex: 10 elements ---> 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+
+search 100 -----> n -----> worst case
+search 10 ------> 1 -----> best case
+search 50 ------> n/2 ---> avg case
+
+Note: we will represent time complexity of an alg max by using WORST CASE.
+
+
+growth of functions
+-------------------
+
+constant time O(1)
+------------------
+algorithm/program is going to take constant time
+
+Ex:
+---
+	accessing nth element from an array
+	push/pop/peek operations in stack
+	insert/delete operations in queue
+	search operation in hashtable
+	etc
+
+linear time O(n)
+----------------
+execution of alg/prg is directly proportional to input size.
+
+Ex:
+	linear search on array
+	finding max element in an array
+	traversal of a tree
+	etc
+
+logarithmic time O(logn)
+------------------------
+execution of alg/prg is depending on logarithmic time of input size
+
+Ex:
+	binary search
+	all divide and conquer algorithms
+	etc
+
+quadratic time O(n2)
+--------------------
+execution of alg/prg is depending on quatratic time of input size
+
+Ex:
+	bubble sort
+	selection sort
+	insertion sort
+	etc
+
+
+Exponential time O(2^n)
+-----------------------
+execution of alg/prg is depending on exponential of input size
+
+Ex:
+	power set
+	sub sets
+	etc
+
+factorial time O(n!)
+--------------------
+All possible permutations of all elements of input size are generated
+
+Ex:
+	finding permutations of string, arrays, numbers etc
+
+	a ----> a ---> 1
+	ab ---> ab, ba --> 2
+	abc --> abc, acb, bac, bca, cab, cba ---> 6
+	abcd --> 24
+	abcde --> 120
+
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static int fun(int n)
+	{
+		int c=0;
+		c++;
+		System.out.println(n-1);
+		c++;
+		System.out.println(n);
+		c++;
+		System.out.println(n+1);
+
+		return c;
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("N=5, complexity: O(1) "+fun(5));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+4
+5
+6
+N=5, complexity: O(1) 3
+
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static int fun(int n)
+	{
+		int c=0;
+
+		for(int i=1;i<=n;i++)
+		{
+			c++;
+		}
+
+		return c;
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("N=100, complexity: O(n) "+fun(100));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+N=100, complexity: O(n) 100
+
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static int fun(int n)
+	{
+		int c=0;
+
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=n;j++)
+			{
+				c++;
+			}
+		}
+
+		return c;
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("N=100, complexity: O(n2) "+fun(100));//10000
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+N=100, complexity: O(n2) 10000
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static int fun(int n)
+	{
+		int c=0;
+
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=n;j++)
+			{
+				for(int k=1;k<=n;k++)
+				{
+					c++;
+				}
+			}
+		}
+
+		return c;
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("N=100, complexity: O(n3) "+fun(100));//1000000
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+N=100, complexity: O(n3) 1000000
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static int fun(int n)
+	{
+		int c=0;
+
+		for(int i=1;i<=n;i=i*2)
+		{
+			System.out.println(i);
+			c++;
+		}
+
+		return c;
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("N=100, complexity: O(log n) "+fun(100));//7
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+1
+2
+4
+8
+16
+32
+64
+N=100, complexity: O(log n) 7
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static int fun(int n)
+	{
+		int c=0;
+
+		for(int i=n;i>=1;i=i/2)
+		{
+			System.out.println(i);
+			c++;
+		}
+
+		return c;
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("N=100, complexity: O(log n) "+fun(100));//7
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+100
+50
+25
+12
+6
+3
+1
+N=100, complexity: O(log n) 7
+
+Chapter-03. Sample Algorithms and implementations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+01. Implement program to swap given two integer values.
+02. Implement a program to find max and min of two numbers.
+03. Implement a program to find max and min of three numbers.
+04. Implement a program to find max and min of four numbers.
+05. Implement a program to check whether the given number is even or odd.
+06. sum of n natural numbers
+07. factorial of the given number
+08. prime number or not
+09. extract digits from the given number
+10. reverse of the given number
+11. check whether the given number is paliandrome number of not.
+12. amstrong number of not
+13. strong number
+14. fib sequence
+15. trib sequence
+
+
+
+01. Implement program to swap given two integer values.
+-------------------------------------------------------
+Ex:
+   a = 111 and b = 222 -------> a = 222 and b = 111
+
+
+Algorithm:
+----------
+1. read a and b values from the user.
+2. print a and b values on the console before swaping.
+3. apply business logic
+
+logic1: by using temp variable
+------------------------------
+temp = a;
+a = b;
+b = temp;
+
+logic2: by using add and sub 
+----------------------------
+a = a+b;
+b = a-b;
+a = a-b;
+
+logic3: by using mul and div
+----------------------------
+a = a*b;
+b = a/b;
+a = a/b;
+
+logic4: by using bitwise operators
+----------------------------------
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+
+
+logic5: by using single line statement
+--------------------------------------
+a = a+b - (b=a);
+
+4. print a and b values on the console after swaping.
+
+import java.util.*;
+class Test
+{
+	public static void swap1(int x,int y)
+	{
+		System.out.println("before swaping a: "+x+" and b: "+y);
+		//logic
+		int temp = x;
+		x = y;
+		y = temp;
+		System.out.println("after  swaping a: "+x+" and b: "+y);
+	}
+	public static void swap2(int x,int y)
+	{
+		System.out.println("before swaping a: "+x+" and b: "+y);
+		//logic
+		x = x + y;
+		y = x - y;
+		x = x - y;
+		System.out.println("after  swaping a: "+x+" and b: "+y);
+	}
+	public static void swap3(int x,int y)
+	{
+		System.out.println("before swaping a: "+x+" and b: "+y);
+		//logic
+		x = x * y;
+		y = x / y;
+		x = x / y;
+		System.out.println("after  swaping a: "+x+" and b: "+y);
+	}
+	public static void swap4(int x,int y)
+	{
+		System.out.println("before swaping a: "+x+" and b: "+y);
+		//logic
+		x = x ^ y;
+		y = x ^ y;
+		x = x ^ y;
+		System.out.println("after  swaping a: "+x+" and b: "+y);
+	}
+	public static void swap5(int x,int y)
+	{
+		System.out.println("before swaping a: "+x+" and b: "+y);
+		//logic
+		x = x+y-(y=x);
+		System.out.println("after  swaping a: "+x+" and b: "+y);
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter a value: ");
+		int a = obj.nextInt();
+		System.out.println("Enter b value: ");
+		int b = obj.nextInt();
+
+		//make a call to swap method
+		swap5(a,b);
+		
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter a value:
+2
+Enter b value:
+4
+before swaping a: 2 and b: 4
+after  swaping a: 4 and b: 2
+
+02. Implement a program to find max and min of two numbers.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1) read two integer values from the user
+2) apply business logic
+
+logic1: by using if and else
+logic2: by using conditional operator
+logic3: by using predefined methods		
+
+3) print the result
+
+import java.util.*;
+class Test
+{
+	public static int max1(int a,int b)
+	{
+		//using if else
+		if(a>b)
+			return a;
+		else
+			return b;
+	}
+	public static int max2(int a,int b)
+	{
+		//conditional
+		return (a>b)?a:b;
+	}
+	public static int max3(int a,int b)
+	{
+		//predefined 
+		return Math.max(a,b);
+	}
+	public static int min1(int a,int b)
+	{
+		//using if else
+		if(a<b)
+			return a;
+		else
+			return b;
+	}
+	public static int min2(int a,int b)
+	{
+		//conditional
+		return (a<b)?a:b;
+	}
+	public static int min3(int a,int b)
+	{
+		//predefined 
+		return Math.min(a,b);
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter a value: ");
+		int a = obj.nextInt();
+		System.out.println("Enter b value: ");
+		int b = obj.nextInt();
+
+		System.out.println("max: "+max1(a,b)+" and min: "+min1(a,b));
+		System.out.println("max: "+max2(a,b)+" and min: "+min2(a,b));
+		System.out.println("max: "+max3(a,b)+" and min: "+min3(a,b));
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter a value:
+10
+Enter b value:
+20
+max: 20 and min: 10
+max: 20 and min: 10
+max: 20 and min: 10
+
+C:\test>java Test
+Enter a value:
+10
+Enter b value:
+-20
+max: 10 and min: -20
+max: 10 and min: -20
+max: 10 and min: -20
+
+03. Implement a program to find max and min of three numbers.
+-------------------------------------------------------------
+import java.util.*;
+class Test
+{
+	public static int max1(int a,int b,int c)
+	{
+		//using else if
+		if(a>b && a>c)
+			return a;
+		else if(b>c)
+			return b;
+		else
+			return c;
+	}
+	public static int max2(int a,int b,int c)
+	{
+		//conditional
+		return (a>b && a>c)?a:(b>c?b:c);
+	}
+	public static int max3(int a,int b,int c)
+	{
+		//predefined 
+		return Math.max(Math.max(a,b),c);
+	}
+	public static int min1(int a,int b,int c)
+	{
+		//using else if
+		if(a<b && a<c)
+			return a;
+		else if(b<c)
+			return b;
+		else
+			return c;
+	}
+	public static int min2(int a,int b,int c)
+	{
+		//conditional
+		return (a<b && a<c)?a:(b<c?b:c);
+	}
+	public static int min3(int a,int b,int c)
+	{
+		//predefined 
+		return Math.min(Math.min(a,b),c);
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter a value: ");
+		int a = obj.nextInt();
+		System.out.println("Enter b value: ");
+		int b = obj.nextInt();
+		System.out.println("Enter c value: ");
+		int c = obj.nextInt();
+
+		System.out.println("max: "+max1(a,b,c)+" and min: "+min1(a,b,c));
+		System.out.println("max: "+max2(a,b,c)+" and min: "+min2(a,b,c));
+		System.out.println("max: "+max3(a,b,c)+" and min: "+min3(a,b,c));
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter a value:
+10
+Enter b value:
+20
+Enter c value:
+30
+max: 30 and min: 10
+max: 30 and min: 10
+max: 30 and min: 10
+
+C:\test>java Test
+Enter a value:
+10
+Enter b value:
+20
+Enter c value:
+-30
+max: 20 and min: -30
+max: 20 and min: -30
+max: 20 and min: -30
+
+C:\test>java Test
+Enter a value:
+10
+Enter b value:
+-20
+Enter c value:
+30
+max: 30 and min: -20
+max: 30 and min: -20
+max: 30 and min: -20
+
+04. Implement a program to find max and min of four numbers.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+step1: read four integer values from the user
+step2: apply business logic
+
+logic1: by using else if
+logic2: by using conditional operator
+logic3: by using predefined methods
+
+step3: print the result
+
+import java.util.*;
+class Test
+{
+	public static int max1(int a,int b,int c,int d)
+	{
+		//using else if
+		if(a>b && a>c && a>d)
+			return a;
+		else if(b>c && b>d)
+			return b;
+		else if(c>d)
+			return c;
+		else
+			return d;
+	}
+	public static int max2(int a,int b,int c,int d)
+	{
+		//conditional
+		return (a>b && a>c && a>d)?a:(b>c && b>d?b:(c>d?c:d));
+	}
+	public static int max3(int a,int b,int c,int d)
+	{
+		//predefined 
+		return Math.max(Math.max(a,b),Math.max(c,d));
+	}
+	public static int min1(int a,int b,int c,int d)
+	{
+		//using else if
+		if(a<b && a<c && a<d)
+			return a;
+		else if(b<c && b<d)
+			return b;
+		else if(c<d)
+			return c;
+		else
+			return d;
+	}
+	public static int min2(int a,int b,int c,int d)
+	{
+		//conditional
+		return (a<b && a<c && a<d)?a:(b<c && b<d?b:(c<d?c:d));
+	}
+	public static int min3(int a,int b,int c,int d)
+	{
+		//predefined 
+		return Math.min(Math.min(a,b),Math.min(c,d));
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter a value: ");
+		int a = obj.nextInt();
+		System.out.println("Enter b value: ");
+		int b = obj.nextInt();
+		System.out.println("Enter c value: ");
+		int c = obj.nextInt();
+		System.out.println("Enter d value: ");
+		int d = obj.nextInt();
+
+		System.out.println("max: "+max1(a,b,c,d)+" and min: "+min1(a,b,c,d));
+		System.out.println("max: "+max2(a,b,c,d)+" and min: "+min2(a,b,c,d));
+		System.out.println("max: "+max3(a,b,c,d)+" and min: "+min3(a,b,c,d));
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter a value:
+1
+Enter b value:
+2
+Enter c value:
+3
+Enter d value:
+4
+max: 4 and min: 1
+max: 4 and min: 1
+max: 4 and min: 1
+
+C:\test>java Test
+Enter a value:
+1
+Enter b value:
+2
+Enter c value:
+3
+Enter d value:
+-4
+max: 3 and min: -4
+max: 3 and min: -4
+max: 3 and min: -4
+
+C:\test>java Test
+Enter a value:
+1
+Enter b value:
+2
+Enter c value:
+-3
+Enter d value:
+4
+max: 4 and min: -3
+max: 4 and min: -3
+max: 4 and min: -3
+
+C:\test>java Test
+Enter a value:
+1
+Enter b value:
+-2
+Enter c value:
+3
+Enter d value:
+4
+max: 4 and min: -2
+max: 4 and min: -2
+max: 4 and min: -2
+
+
+05. Implement a program to check whether the given number is even or odd.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+step1: read 'n' value from the user
+step2: apply business logic
+step3: print the result
+
+
+import java.util.*;
+class Test
+{
+	public static String method1(int n)
+	{
+		if(n%2==0)
+			return "even";
+		return "odd";
+	}
+	public static String method2(int n)
+	{
+		if((n&1)==0)
+			return "even";
+		return "odd";
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		for(int i=0;i<=10;i++)
+			System.out.println(i+"\t"+method1(i)+"\t"+method2(i));
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+0       even    even
+1       odd     odd
+2       even    even
+3       odd     odd
+4       even    even
+5       odd     odd
+6       even    even
+7       odd     odd
+8       even    even
+9       odd     odd
+10      even    even
+
+06. sum of n natural numbers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+n=5 -----> 0+1+2+3+4+5 = 15
+
+step1: read n value from the user
+step2: apply business logic
+
+logic1: by using loops
+logic2: by using recursion
+logic3: by using math formula
+
+step3: print the result
+
+import java.util.*;
+class Test
+{
+	public static int sumofn1(int n) //O(n)
+	{
+		int i,s=0;
+		for(i=0;i<=n;i++)
+			s=s+i;
+		return s;
+	}
+	public static int sumofn2(int n)
+	{
+		if(n==0)
+			return 0;
+		return n+sumofn2(n-1);
+	}
+	public static int sumofn3(int n)//O(1)
+	{
+		return n*(n+1)/2;
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter n value: ");
+		int n = obj.nextInt();
+
+		System.out.println(sumofn1(n));
+		System.out.println(sumofn2(n));
+		System.out.println(sumofn3(n));
+	}
+}
+
+C:\test>java Test
+Enter n value:
+5
+15
+15
+15
+
+C:\test>java Test
+Enter n value:
+4
+10
+10
+10
+
+C:\test>java Test
+Enter n value:
+0
+0
+0
+0
+
+07. factorial of the given number
+---------------------------------
+import java.util.*;
+class Test
+{
+	public static int fact1(int n)
+	{
+		int i,p=1;
+		for(i=1;i<=n;i++)
+			p=p*i;
+		return p;
+	}
+	public static int fact2(int n)
+	{
+		if(n==0)
+			return 1;
+		return n*fact2(n-1);
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter n value: ");
+		int n = obj.nextInt();
+
+		System.out.println(fact1(n));
+		System.out.println(fact2(n));
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter n value:
+5
+120
+120
+
+C:\test>java Test
+Enter n value:
+3
+6
+6
+
+C:\test>java Test
+Enter n value:
+0
+1
+1
+
+8) prime number or not
+----------------------
+Hint: for any number if we have only 2 factors then we can say that num is prime.
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static boolean prime1(int n)
+	{
+		int i,f=0;
+		for(i=1;i<=n;i++)
+		{
+			if(n%i==0)
+				f++;
+		}
+		return f==2;
+	}
+	public static boolean prime2(int n,int i)
+	{
+		if(i==1)
+			return true;
+		if(n%i==0)
+			return false;
+		return prime2(n,i-1);
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter n value: ");
+		int n = obj.nextInt();
+
+		System.out.println(prime1(n));
+		System.out.println(prime2(n,n/2));
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter n value:
+5
+true
+true
+
+C:\test>java Test
+Enter n value:
+6
+false
+false
+
+C:\test>java Test
+Enter n value:
+7
+true
+true
+
+9) extract digits from the given number
+---------------------------------------
+123 ----> 3, 2, 1
+145 ----> 5, 4, 1
+
+import java.util.*;
+class Test
+{
+	public static void extract(int n)
+	{
+		int d;
+		while(n!=0)
+		{
+			d=n%10;
+			System.out.println(d);
+			n=n/10;
+		}
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter n value: ");
+		int n = obj.nextInt();
+		extract(n);
+	}
+}
+
+
+C:\test>java Test
+Enter n value:
+1234
+4
+3
+2
+1
+
+C:\test>java Test
+Enter n value:
+123
+3
+2
+1
+
+10) reverse of the given number
+-------------------------------
+import java.util.Scanner;
+class Test
+{
+	public static int reverse1(int n)
+	{
+		int d,r=0;
+		while(n!=0)
+		{
+			d=n%10;
+			r=r*10+d;
+			n=n/10;
+		}
+		return r;
+	}
+	public static int reverse2(int n)
+	{
+		String s = Integer.toString(n);
+		StringBuffer sb = new StringBuffer(s);
+		sb.reverse();
+		String ss = sb.toString();
+		return Integer.parseInt(ss);
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter any number: ");
+		int n = obj.nextInt();
+
+		System.out.println(reverse1(n));
+		System.out.println(reverse2(n));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter any number:
+123
+321
+321
+
+11) check whether the given number is paliandrome number of not.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import java.util.Scanner;
+class Test
+{
+	public static boolean pali1(int n)
+	{
+		int d,r=0,temp=n;
+		while(n!=0)
+		{
+			d=n%10;
+			r=r*10+d;
+			n=n/10;
+		}
+		return r==temp;
+	}
+	public static boolean pali2(int n)
+	{
+		String s = Integer.toString(n);
+		StringBuffer sb = new StringBuffer(s);
+		sb.reverse();
+		String ss = sb.toString();
+		return s.equals(ss);
+	}
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter any number: ");
+		int n = obj.nextInt();
+
+		System.out.println(pali1(n));
+		System.out.println(pali2(n));
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter any number:
+123
+false
+false
+
+C:\test>java Test
+Enter any number:
+121
+true
+true
+
+12) amstrong number of not
+---------------------------
+123 ----> 1^3 + 2^3 + 3^3 = 1 + 8 + 27 = 36 ------> No
+153 ----> 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153 ---> Yes
+
+import java.util.*;
+class Test
+{
+	public static boolean armstrong(int n)
+	{
+		int temp=n,s=0,d;
+		while(n!=0)
+		{
+			d=n%10;
+			s=s+(d*d*d);
+			n=n/10;
+		}
+		return temp==s;
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println(armstrong(123));//false
+		System.out.println(armstrong(153));//true	
+		System.out.println(armstrong(370));//true
+		System.out.println(armstrong(407));//true			
+	}
+}
+
+13. strong number
+-----------------
+123 ----> 1! + 2! + 3! = 1 + 2 + 6 = 9
+145 ----> 1! + 4! + 5! = 1 + 24 + 120 = 145
+
+import java.util.*;
+class Test
+{
+	public static int fact(int n)
+	{
+		if(n==0)
+			return 1;
+		return n*fact(n-1);
+	}
+	public static boolean strong(int n)
+	{
+		int temp=n,s=0,d;
+		while(n!=0)
+		{
+			d=n%10;
+			s=s+fact(d);
+			n=n/10;
+		}
+		return temp==s;
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println(strong(123));//false
+		System.out.println(strong(145));//true	
+	}
+}
+
+14) fib sequence
+----------------
+0 1 1 2 3 5 8 13 21 ......
+
+import java.util.*;
+class Test
+{
+	public static ArrayList<Integer> fib(int n)
+	{
+		ArrayList<Integer> list = new ArrayList<>();
+		int a,b,c,i;
+		a=0;
+		b=1;
+		list.add(a);
+		list.add(b);
+		for(i=2;i<n;i++)
+		{
+			c=a+b;
+			list.add(c);
+			a=b;
+			b=c;
+		}
+		return list;
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println(fib(7));//[0, 1, 1, 2, 3, 5, 8]
+	}
+}
+
+15) trib sequence
+------------------
+0 1 2 3 6 11 20 .....
+
+import java.util.*;
+class Test
+{
+	public static ArrayList<Integer> trib(int n)
+	{
+		ArrayList<Integer> list = new ArrayList<>();
+		int a,b,c,d,i;
+		a=0;
+		b=1;
+		c=2;
+		list.add(a);
+		list.add(b);
+		list.add(c);
+		for(i=3;i<n;i++)
+		{
+			d=a+b+c;
+			list.add(d);
+			a=b;
+			b=c;
+			c=d;
+		}
+		return list;
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println(trib(7));//[0, 1, 2, 3, 6, 11, 20]
+	}
+}
+
+04. Array Data Structure
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+introduction:
+-------------
+a variable is name of memory location, where we can store a signle value. 
+
+int x = 10;
+System.out.println(x); // 10
+----
+----
+x = 12;
+System.out.println(x); // 12
+----
+----
+x = 999;
+System.out.println(x); // 999
+
+a variable can hold only one value at a time. to overcome this problem we can go for arrays
+
+==> array is collection/group of items (values) of same type
+==> all these values are stored under a common name.
+==> all these values must of same type (homogeneous type).
+==> all these values are stored in continues memory locations.
+==> we can access the values present inside an array by using index cocept.
+==> array is considered as basic data structure.
+
+Ex:
+	Student s1 = new Student();
+	Student s2 = new Student();
+	Student s3 = new Student();
+	.
+	.
+	Student s100 = new Student();
+
+Ex:
+	Student s[] = new Student[100];
+
+	s[0] = new Student();
+	s[1] = new Student();
+	.
+	.
+	s[99] = new Student();
+
+advantages of arrays:
+---------------------
+1. it collects group of items.
+2. only one name is sufficient to represent all objects.
+3. we have index concept is there.
+4. insertion order is preserved (in which order we stored same order will get).
+5. duplicates are allowed.
+
+disadvantages of arrays:
+------------------------
+1. it is fixed in size.
+2. it collects similar type of data only.
+3. no inbuilt methods.
+
+variable ----> arrays ----> coolections (ADTS)
+
+
+
+declaration of an array
+~~~~~~~~~~~~~~~~~~~~~~~
+before using an array, compolusry we have to declare the array. the following syntax is used to declare an array.
+
+syntax:
+			datatype arrayname[];
+			datatype arrayname[][];
+			datatype arrayname[][][];
+
+[] ----> 1-D
+[][] --> 2-D
+[][][]-> 3-D
+
+Ex:
+---
+		int x[];
+		int y[][];
+		int z[][][];
+
+
+Note1: int x[10]; ----> it is valid in c but not in java
+Note2: int x[]; ------> it is valid in java but not in c
+
+Note:
+		int x[];
+		int []x;
+		int[] x; ----> recoomended 
+
+
+
+creation of arrays:
+~~~~~~~~~~~~~~~~~~~
+once if an array is declared, we can create array by using 'new' keyword. i.e. in java array is considered as an object.
+
+Ex:
+		int x[];
+		x = new int[5];
+
+Ex:
+		int[] x = new int[5];
+
+Ex:
+		int a[][];
+		a = new int[3][3];
+
+Ex:
+		int[][] a = new int[3][];
+
+		a[0] = new int[2];
+		a[1] = new int[1];
+		a[2] = new int[3];
+
+Note1: int[][] x = new int[3][]; ----> valid
+Note2: int[][] x = new int[][3]; ----> invalid
+
+
+initialization of an array elements
+-----------------------------------
+Once if we perform declaration and creation of arrays, then we can initialize values for theose array elements.
+
+Ex:
+---
+		int[] x = new in[3];
+		x[0] = 111;
+		x[1] = 222;
+		x[2] = 333;
+
+		System.out.println(x[0]);//111
+		System.out.println(x[1]);//222
+		System.out.println(x[2]);//333
+
+Ex:
+---
+		int[] x = new in[3];
+
+		System.out.println(x[0]);//0
+		System.out.println(x[1]);//0
+		System.out.println(x[2]);//0
+
+Note: If we are not providing any default values, then following are the default values assigned by java.
+
+integers ------> 0
+double --------> 0.0
+char ---------->
+boolean -------> false
+object --------> null
+
+
+declaration, creation and initialization of an array in single line
+-------------------------------------------------------------------
+Ex:
+		int a[];
+		a = new int[4];
+		a[0] = 111;
+		a[1] = 222;
+		a[2] = 333;
+		a[3] = 444;
+
+
+Ex:
+		int[] a = {111, 222, 333, 444};
+
+Ex:
+		int[][] b = {{1, 2},{3, 4}};		
+		int[][] c = {{1,2,3}, {4,5,6}, {7,8,9}};
+		int[][] d = {{1,2},{3},{4,5,6,7}};
+
+index concept:
+--------------
+It is used to access the elements one by one from an array. index value is always an int value starting from 0th location to n-1 th location, where n is size of the array.
+
+Ex:
+		n=4
+		a[0] ----> 1st element
+		a[1] ----> 2nd element
+		a[2] ----> 3rd element
+		a[3] ----> 4th element
+
+Note: if we are trying to access the elements by using -ve index we will get runtime error
+
+Ex:
+		int[] a = {1,2,3,4};
+
+		a[0] ----> 1
+		a[1] ----> 2
+		a[2] ----> 3
+		a[3] ----> 4
+		a[4] ----> Runtime Error
+
+ArrayIndexOutOfBoundsException:
+-------------------------------
+Ex1:
+----
+import java.util.*;
+class Test
+{
+	public static void main(String[] args)
+	{
+		int[] a = {11, 22, 33};
+
+		System.out.println(a[0]); //11
+		System.out.println(a[1]); //22
+		System.out.println(a[2]); //33
+
+		System.out.println(a[3]);//AIOBE
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+11
+22
+33
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+        at Test.main(Test.java:12)
+
+
+Ex2:
+----
+import java.util.*;
+class Test
+{
+	public static void main(String[] args)
+	{
+		int[] a = {11, 22, 33};
+
+		System.out.println(a[0]); //11
+		System.out.println(a[1]); //22
+		System.out.println(a[2]); //33
+
+		System.out.println(a[-8]);//AIOBE
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+11
+22
+33
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index -8 out of bounds for length 3
+        at Test.main(Test.java:12)
+
+
+NegativeArraySizeException:
+---------------------------
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static void main(String[] args)
+	{
+		int[] a = new int[-4];
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Exception in thread "main" java.lang.NegativeArraySizeException: -4
+        at Test.main(Test.java:6)
+
+
+length identifier:
+------------------
+it returns the number of elements present in an array.
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static void main(String[] args)
+	{
+		int[] a = new int[3];
+		int[] b = new int[10];
+		int[] c = new int[1];
+		int[] d = new int[0];
+
+		System.out.println(a.length);//3
+		System.out.println(b.length);//10
+		System.out.println(c.length);//1
+		System.out.println(d.length);//0
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+3
+10
+1
+0
+
+Note: What is the difference between length and length()?
+
+length -----> it is an identifier applicable only for array, size of array
+length() ---> it is a method applicable only for strings, size of string
+
+
+
+Reading and Writing an array
+----------------------------
+The following are the different input functions existed in java.
+
+1) BufferedReader ----> char and Strings
+2) Console -----------> string and passwords
+3) Scanner -----------> all primitives and strings
+
+Scanner obj = new Scanner(System.in);
+
+integer ----> obj.nextInt();
+double -----> obj.nextDouble();
+boolean ----> obj.nextBoolean();
+String -----> obj.next() and obj.nextLine()
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int a[] = new int[4];
+
+		a[0] = obj.nextInt();
+		a[1] = obj.nextInt();
+		a[2] = obj.nextInt();
+		a[3] = obj.nextInt();
+
+		System.out.println(a[0]);
+		System.out.println(a[1]);
+		System.out.println(a[2]);
+		System.out.println(a[3]);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+11 22 33 44
+11
+22
+33
+44
+
+The following are the various methods which are used to display the elements in an array
+
+1) index concept
+2) while loop
+3) for loop
+4) for each loop
+5) toString()
+
+
+1) index concept
+----------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int a[] = new int[4];
+
+		a[0] = obj.nextInt();
+		a[1] = obj.nextInt();
+		a[2] = obj.nextInt();
+		a[3] = obj.nextInt();
+
+		System.out.println(a[0]);
+		System.out.println(a[1]);
+		System.out.println(a[2]);
+		System.out.println(a[3]);
+	}
+}
+
+C:\test>java Test
+11 22 33 44
+11
+22
+33
+44
+
+2) while loop
+-------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int a[] = new int[4];
+
+		a[0] = obj.nextInt();
+		a[1] = obj.nextInt();
+		a[2] = obj.nextInt();
+		a[3] = obj.nextInt();
+
+		int idx = 0;
+		while(idx<a.length)
+		{
+			System.out.println(a[idx]);
+			idx++;
+		}
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+12 13 14 15
+12
+13
+14
+15
+
+3) for loop
+-----------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int a[] = new int[4];
+
+		a[0] = obj.nextInt();
+		a[1] = obj.nextInt();
+		a[2] = obj.nextInt();
+		a[3] = obj.nextInt();
+
+		
+		for(int index=0;index<a.length;index++)
+		{
+			System.out.println(a[index]);
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+77 78 79 80
+77
+78
+79
+80
+
+4) for each loop
+----------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int a[] = new int[4];
+
+		a[0] = obj.nextInt();
+		a[1] = obj.nextInt();
+		a[2] = obj.nextInt();
+		a[3] = obj.nextInt();
+
+		
+		for(int item:a)
+		{
+			System.out.println(item);
+		}
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+11 22 33 44
+11
+22
+33
+44
+
+C:\test>
+
+5) toString()
+-------------
+Arrays.toString(array) ====> [obj1, obj2, obj3, obj4, obj5]
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int a[] = new int[4];
+
+		a[0] = obj.nextInt();
+		a[1] = obj.nextInt();
+		a[2] = obj.nextInt();
+		a[3] = obj.nextInt();
+
+		
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+44 55 66 77
+[44, 55, 66, 77]
+
+PROGRAMS ON ARRAY
+-----------------
+01. reading and writing array elements.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+1 2 3 4 5 6
+[1, 2, 3, 4, 5, 6]
+
+C:\test>
+
+02. sum of elements present in an array.
+----------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			sum=sum+item;
+		}
+		System.out.println(sum);
+	}
+}
+
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 2 3 4 5
+[1, 2, 3, 4, 5]
+15
+
+03. sum of even elements present in an array.
+---------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(item%2==0)
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 2 3 4 5
+[1, 2, 3, 4, 5]
+6
+
+C:\test>
+
+04. sum of odd elements present in an array.
+--------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(item%2!=0)
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 2 3 4 5
+[1, 2, 3, 4, 5]
+9
+
+C:\test>
+
+05. sum of even indexed elements in an array.
+---------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int i=0;i<a.length;i++)
+		{
+			if(i%2==0)
+			{
+				sum=sum+a[i];
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 2 3 4 6
+[1, 2, 3, 4, 6]
+10
+
+06. sum of odd indexed elements in an array.
+--------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int i=0;i<a.length;i++)
+		{
+			if(i%2!=0)
+			{
+				sum=sum+a[i];
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 2 3 4 6
+[1, 2, 3, 4, 6]
+6
+
+C:\test>
+
+07. sum of elements which are divisible by 3.
+---------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(item%3==0)
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+9 2 3 4 5
+[9, 2, 3, 4, 5]
+12
+
+C:\test>
+
+08. sum of elements which are divisible by both 2 and 3.
+--------------------------------------------------------
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(item%3==0 && item%2==0)
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+9 12 3 6 5 8
+[9, 12, 3, 6, 5, 8]
+18
+
+09. sum of elements which are ending with 3.
+--------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(item%10==3)
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+111 222 333 123 101
+[111, 222, 333, 123, 101]
+456
+
+C:\test>
+
+
+10. sum of prime elements
+--------------------------
+import java.util.*;
+class Test 
+{
+	public static boolean prime(int n)
+	{
+		if(n==1)
+			return false;
+		for(int i=2;i<n;i++)
+		{
+			if(n%i==0)
+				return false;
+		}
+		return true;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(prime(item))
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+10
+Enter 10 elements:
+1 2 3 4 5 6 7 8 9 10
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+17
+
+C:\test>
+
+11. sum of non-prime elements
+-----------------------------
+import java.util.*;
+class Test 
+{
+	public static boolean prime(int n)
+	{
+		if(n==1)
+			return false;
+		for(int i=2;i<n;i++)
+		{
+			if(n%i==0)
+				return false;
+		}
+		return true;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(!prime(item))
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+10
+Enter 10 elements:
+1 2 3 4 5 6 7 8 9 10
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+38
+
+12. sum of +ve elements 
+-----------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(item>0)
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 -2 3 4 -5
+[1, -2, 3, 4, -5]
+8
+
+13. sum of -ve elements
+-----------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(item<0)
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 -2 3 4 -5
+[1, -2, 3, 4, -5]
+-7
+
+14. sum of paliandrome elements
+-------------------------------
+
+import java.util.*;
+class Test 
+{
+	static boolean pali(int n)
+	{
+		int temp,r=0,d;
+		temp = n;
+		while(n!=0)
+		{
+			d=n%10;
+			r=r*10+d;
+			n=n/10;
+		}
+		return temp==r;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(pali(item))
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+11 12 22 13 33
+[11, 12, 22, 13, 33]
+66
+
+15. sum of non-palianrome elements
+----------------------------------
+import java.util.*;
+class Test 
+{
+	static boolean pali(int n)
+	{
+		int temp,r=0,d;
+		temp = n;
+		while(n!=0)
+		{
+			d=n%10;
+			r=r*10+d;
+			n=n/10;
+		}
+		return temp==r;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int sum=0;
+		for(int item:a)
+		{
+			if(!pali(item))
+			{
+				sum=sum+item;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+11 12 22 13 33
+[11, 12, 22, 13, 33]
+25
+
+16. max element present in an array
+-----------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int max = a[0];
+		for(int i=1;i<n;i++)
+		{
+			if(max < a[i])
+				max = a[i];
+		}
+		System.out.println(max);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+7
+Enter 7 elements:
+1 9 3 2 6 -10 4
+[1, 9, 3, 2, 6, -10, 4]
+9
+
+17. min element present in an array
+------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int min = a[0];
+		for(int i=1;i<n;i++)
+		{
+			if(min > a[i])
+				min = a[i];
+		}
+		System.out.println(min);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+7
+Enter 7 elements:
+1 9 3 2 6 -10 4
+[1, 9, 3, 2, 6, -10, 4]
+-10
+
+18. sort all the elements in array in asc order
+-----------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int i,j,temp;
+		for(i=0;i<n;i++)
+		{
+			for(j=i+1;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+4 1 2 5 3
+[4, 1, 2, 5, 3]
+[1, 2, 3, 4, 5]
+
+19. sort all the elements in array in desc order
+------------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int i,j,temp;
+		for(i=0;i<n;i++)
+		{
+			for(j=i+1;j<n;j++)
+			{
+				if(a[i]<a[j])
+				{
+					temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+1 6 2 5 3 4
+[1, 6, 2, 5, 3, 4]
+[6, 5, 4, 3, 2, 1]
+
+20. find kth smallest element in an array
+-----------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int i,j,temp;
+		for(i=0;i<n;i++)
+		{
+			for(j=i+1;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+
+		System.out.println(Arrays.toString(a));
+		System.out.println("1st min: "+a[0]);
+		System.out.println("2nd min: "+a[1]);
+		System.out.println("3rd min: "+a[2]);
+	}
+}
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+17 12 19 15 18 14
+[17, 12, 19, 15, 18, 14]
+[12, 14, 15, 17, 18, 19]
+1st min: 12
+2nd min: 14
+3rd min: 15
+
+21. find kth largest element in an array
+----------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int i,j,temp;
+		for(i=0;i<n;i++)
+		{
+			for(j=i+1;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+
+		System.out.println(Arrays.toString(a));
+		System.out.println("1st max: "+a[n-1]);
+		System.out.println("2nd max: "+a[n-2]);
+		System.out.println("3rd max: "+a[n-3]);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+17 12 19 15 18 14
+[17, 12, 19, 15, 18, 14]
+[12, 14, 15, 17, 18, 19]
+1st max: 19
+2nd max: 18
+3rd max: 17
+
+22. linear search operation on array
+------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+
+		int index=-1,key;
+		System.out.println("Enter key value: ");
+		key = obj.nextInt();
+
+		for(int i=0;i<n;i++)
+		{
+			if(key==a[i])
+			{
+				index = i;
+				break;
+			}
+		}
+
+		System.out.println(index);
+	}
+}
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+1 7 2 4 5 3
+[1, 7, 2, 4, 5, 3]
+Enter key value:
+2
+2
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+1 7 2 4 5 3
+[1, 7, 2, 4, 5, 3]
+Enter key value:
+3
+5
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+1 7 2 4 5 3
+[1, 7, 2, 4, 5, 3]
+Enter key value:
+10
+-1
+
+23. binary search operation on array
+-------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		int i,j,temp;
+		for(i=0;i<n;i++)
+		{
+			for(j=i+1;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+
+		System.out.println(Arrays.toString(a));
+
+		int index=-1,key;
+		System.out.println("Enter key value: ");
+		key = obj.nextInt();
+
+		int low,high,mid;
+		low = 0;
+		high = n-1;
+		while(low<=high)
+		{
+			mid = (low+high)/2;
+			if(a[mid]==key)
+			{
+				index = mid;
+				break;
+			}
+			else if(key<a[mid])
+				high = mid-1;
+			else
+				low = mid+1;
+		}
+		
+
+		System.out.println(index);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+7
+Enter 7 elements:
+11 12 13 14 15 16 17
+[11, 12, 13, 14, 15, 16, 17]
+Enter key value:
+18
+-1
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+7
+Enter 7 elements:
+11 12 13 14 15 16 17
+[11, 12, 13, 14, 15, 16, 17]
+Enter key value:
+16
+5
+
+24. implement a program to find sum of first and last element, second element and second last element and so on.
+-----------------------------------------------------------------------------
+5
+1 2 3 4 5
+
+output: 6 6 6
+
+6
+1 1 4 8 2 6
+
+output: 7 3 12
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		int low = 0;
+		int high = n-1;
+		while(low<=high)
+		{
+			System.out.print((a[low]+a[high])+" ");
+			low++;
+			high--;
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 2 6 3 4
+5 5 12
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+1 1 2 4 8 3
+4 9 6
+
+25. reverse of an array
+-----------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+		int low = 0;
+		int high = n-1;
+		while(low<high)
+		{
+			int temp;
+			temp = a[low];
+			a[low] = a[high];
+			a[high] = temp;
+
+			low++;
+			high--;
+		}
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 2 3 4 5
+[1, 2, 3, 4, 5]
+[5, 4, 3, 2, 1]
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+1 2 3 4 5 6
+[1, 2, 3, 4, 5, 6]
+[6, 5, 4, 3, 2, 1]
+
+26. sort the elements in an array in asc order by using predefined methods
+--------------------------------------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+		Arrays.sort(a);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+10
+Enter 10 elements:
+1 8 3 2 5 4 9 8 7 10
+[1, 8, 3, 2, 5, 4, 9, 8, 7, 10]
+[1, 2, 3, 4, 5, 7, 8, 8, 9, 10]
+
+27. print all the elements in an array in wave form
+---------------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(int i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+		Arrays.sort(a);
+		for(int i=1;i<n-1;i=i+2)
+		{
+			int temp = a[i];
+			a[i] = a[i+1];
+			a[i+1] = temp;
+		}
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+1 2 3 4 5 6
+[1, 2, 3, 4, 5, 6]
+[1, 3, 2, 5, 4, 6]
+
+28. split the array
+-------------------
+10 ----> 1 2 3 4 5 6 7 8 9 10
+location --> 5
+
+1st ---> 1 2 3 4 5
+2nd ---> 6 7 8 9 10
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int i,n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(i=0;i<n;i++)
+			a[i] = obj.nextInt();
+
+		System.out.println(Arrays.toString(a));
+		System.out.println("Enter the location to split: ");
+		int location = obj.nextInt();
+		int b[] = new int[location];
+		int c[] = new int[n-location];
+		int k=0;
+		for(i=0;i<location;i++)
+			b[k++] = a[i];
+		k=0;
+		for(i=location;i<n;i++)
+			c[k++] = a[i];
+
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.toString(b));
+		System.out.println(Arrays.toString(c));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+10
+Enter 10 elements:
+1 2 3 4 5 6 7 8 9 10
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Enter the location to split:
+4
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[1, 2, 3, 4]
+[5, 6, 7, 8, 9, 10]
+
+C:\test>java Test
+Enter size of array:
+4
+Enter 4 elements:
+1 2 3 4
+[1, 2, 3, 4]
+Enter the location to split:
+1
+[1, 2, 3, 4]
+[1]
+[2, 3, 4]
+
+C:\test>java Test
+Enter size of array:
+4
+Enter 4 elements:
+1 2 3 4
+[1, 2, 3, 4]
+Enter the location to split:
+0
+[1, 2, 3, 4]
+[]
+[1, 2, 3, 4]
+
+29. merge two arrays
+--------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int i;
+		System.out.println("Enter size of array1: ");
+		int n1 = obj.nextInt();
+
+		int a[] = new int[n1];
+		System.out.println("Enter "+n1+" elements: ");
+		for(i=0;i<n1;i++)
+			a[i] = obj.nextInt();
+		
+		System.out.println("Enter size of array2: ");
+		int n2 = obj.nextInt();
+
+		int b[] = new int[n2];
+
+		System.out.println("Enter "+n2+" elements: ");
+		for(i=0;i<n2;i++)
+			b[i] = obj.nextInt();
+
+		int[] c = new int[n1+n2];
+
+		int j;
+		i=0;
+		j=0;
+		while(i<n1)
+			c[j++] = a[i++];
+		i=0;
+		while(i<n2)
+			c[j++] = b[i++];
+
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.toString(b));
+		System.out.println(Arrays.toString(c));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array1:
+3
+Enter 3 elements:
+1 2 3
+Enter size of array2:
+5
+Enter 5 elements:
+7 8 9 10 11
+[1, 2, 3]
+[7, 8, 9, 10, 11]
+[1, 2, 3, 7, 8, 9, 10, 11]
+
+30. sum and average of array elements
+-------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int i;
+		System.out.println("Enter size of array: ");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+		System.out.println("Enter "+n+" elements: ");
+		for(i=0;i<n;i++)
+			a[i] = obj.nextInt();
+		
+		System.out.println(Arrays.toString(a));
+		int s=0;
+		for(int item:a)
+			s=s+item;
+		System.out.println("Sum: "+s);
+		System.out.println("Avg: "+((double)s/n));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter size of array:
+5
+Enter 5 elements:
+1 2 3 4 5
+[1, 2, 3, 4, 5]
+Sum: 15
+Avg: 3.0
+
+C:\test>java Test
+Enter size of array:
+6
+Enter 6 elements:
+1 2 3 4 5 6
+[1, 2, 3, 4, 5, 6]
+Sum: 21
+Avg: 3.5
+
+
+01. reading and writing array elements.
+02. sum of elements present in an array.
+03. sum of even elements present in an array.
+04. sum of odd elements present in an array.
+05. sum of even indexed elements in an array.
+06. sum of odd indexed elements in an array.
+07. sum of elements which are divisible by 3.
+08. sum of elements which are divisible by both 2 and 3.
+09. sum of elements which are ending with 3.
+10. sum of prime elements
+11. sum of non-prime elements
+12. sum of +ve elements 
+13. sum of -ve elements
+14. sum of paliandrome elements
+15. sum of non-palianrome elements
+16. max element present in an array
+17. min element present in an array
+18. sort all the elements in array in asc order
+19. sort all the elements in array in desc order
+20. find kth smallest element in an array
+21. find kth largest element in an array
+22. linear search operation on array
+23. binary search operation on array
+24. program to find sum of 1st and last ele,2nd ele and sec last ele and so on.
+25. reverse of an array
+26. sort the elements in an array in asc order by using predefined methods
+27. print all the elements in an array in wave form
+28. split the array
+29. merge two arrays
+30. sum and average of array elements
+
+
+
+matrix based programs or 2-D arrays
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+01. Reading and Writing Matrix Elements
+---------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int[][] a = new int[3][3];
+
+		int i,j;
+		System.out.println("Enter matrix elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("MATRIX ELEMENTS:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix elements:
+1 2 3
+4 5 6
+7 8 9
+MATRIX ELEMENTS:
+1 2 3
+4 5 6
+7 8 9
+
+2. Transpose of the given matrix
+--------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int[][] a = new int[3][3];
+
+		int i,j;
+		System.out.println("Enter matrix elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("MATRIX ELEMENTS:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		System.out.println("TRANSPOSE MATRIX ELEMENTS:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[j][i]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+C:\test>java Test
+Enter matrix elements:
+1 2 3
+4 5 6
+7 8 9
+MATRIX ELEMENTS:
+1 2 3
+4 5 6
+7 8 9
+TRANSPOSE MATRIX ELEMENTS:
+1 4 7
+2 5 8
+3 6 9
+
+3. sum of all elements in a matrix
+----------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int[][] a = new int[3][3];
+
+		int i,j;
+		System.out.println("Enter matrix elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("MATRIX ELEMENTS:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		int sum = 0;
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				sum=sum+a[i][j];
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix elements:
+1 2 3
+4 5 6
+7 8 9
+MATRIX ELEMENTS:
+1 2 3
+4 5 6
+7 8 9
+45
+
+C:\test>java Test
+Enter matrix elements:
+1 0 0
+0 1 0
+0 0 1
+MATRIX ELEMENTS:
+1 0 0
+0 1 0
+0 0 1
+3
+
+4. rowwise sum
+--------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int[][] a = new int[3][3];
+
+		int i,j;
+		System.out.println("Enter matrix elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("MATRIX ELEMENTS:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		int sum;
+		for(i=0;i<3;i++)
+		{
+			sum=0;
+			for(j=0;j<3;j++)
+			{
+				sum=sum+a[i][j];
+			}
+			System.out.println(sum);
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix elements:
+1 2 3
+4 5 6
+7 8 9
+MATRIX ELEMENTS:
+1 2 3
+4 5 6
+7 8 9
+6
+15
+24
+
+5. col wise sum
+----------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int[][] a = new int[3][3];
+
+		int i,j;
+		System.out.println("Enter matrix elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("MATRIX ELEMENTS:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		int sum;
+		for(i=0;i<3;i++)
+		{
+			sum=0;
+			for(j=0;j<3;j++)
+			{
+				sum=sum+a[j][i];
+			}
+			System.out.println(sum);
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix elements:
+1 2 3
+4 5 6
+7 8 9
+MATRIX ELEMENTS:
+1 2 3
+4 5 6
+7 8 9
+12
+15
+18
+
+06. sum of diagonal elements
+-----------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int[][] a = new int[3][3];
+
+		int i,j;
+		System.out.println("Enter matrix elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("MATRIX ELEMENTS:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		int sum=0;
+		for(i=0;i<3;i++)
+		{
+			sum=sum+a[i][i];
+		}
+		System.out.println(sum);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix elements:
+1 2 3
+4 5 6
+7 8 9
+MATRIX ELEMENTS:
+1 2 3
+4 5 6
+7 8 9
+15
+
+07. sum of opposite digonal elements
+------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int[][] a = new int[3][3];
+
+		int i,j;
+		System.out.println("Enter matrix elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("MATRIX ELEMENTS:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		int sum=0;
+		for(i=0;i<3;i++)
+		{
+			sum=sum+a[i][3-i-1];
+		}
+		System.out.println(sum);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix elements:
+1 2 3
+4 5 6
+7 8 9
+MATRIX ELEMENTS:
+1 2 3
+4 5 6
+7 8 9
+15
+
+C:\test>java Test
+Enter matrix elements:
+1 0 0
+0 1 0
+0 0 1
+MATRIX ELEMENTS:
+1 0 0
+0 1 0
+0 0 1
+1
+
+08. max/min element present in an array
+---------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int[][] a = new int[3][3];
+
+		int i,j;
+		System.out.println("Enter matrix elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("MATRIX ELEMENTS:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		int max=a[0][0];
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				if(max<a[i][j])
+					max = a[i][j];
+			}
+		}
+		System.out.println(max);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix elements:
+1 2 3
+4 5 6
+7 8 9
+MATRIX ELEMENTS:
+1 2 3
+4 5 6
+7 8 9
+9
+
+C:\test>java Test
+Enter matrix elements:
+1 2 3
+4 5 6
+-7 -8 -9
+MATRIX ELEMENTS:
+1 2 3
+4 5 6
+-7 -8 -9
+6
+
+09. row wise max elements in a matrix
+-------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int[][] a = new int[3][3];
+		int i,j;
+
+		System.out.println("Enter matrix  elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		int m;
+		for(i=0;i<3;i++)
+		{
+			m=a[i][0];
+			for(j=0;j<3;j++)
+			{
+				if(m<a[i][j])
+					m=a[i][j];
+			}
+			System.out.println("Row: "+i+" Max Element: "+m);
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix  elements:
+1 2 3
+4 5 -6
+7 8 -9
+Row: 0 Max Element: 3
+Row: 1 Max Element: 5
+Row: 2 Max Element: 8
+
+10. col wise max elements in a matrix
+-------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int[][] a = new int[3][3];
+		int i,j;
+
+		System.out.println("Enter matrix  elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		int m;
+		for(i=0;i<3;i++)
+		{
+			m=a[i][0];
+			for(j=0;j<3;j++)
+			{
+				if(m<a[j][i])
+					m=a[j][i];
+			}
+			System.out.println("Col: "+i+" Max Element: "+m);
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix  elements:
+1 2 3
+4 5 -6
+-7 8 9
+Col: 0 Max Element: 4
+Col: 1 Max Element: 8
+Col: 2 Max Element: 9
+
+11. sort all the elements present in a matrix
+---------------------------------------------
+1 4 2 
+5 9 6
+7 3 9
+
+1 2 3
+4 5 6
+7 8 9
+
+matrix ---> array ---> sort the array ----> matrix
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int[][] a = new int[3][3];
+		int i,j;
+
+		System.out.println("Enter matrix  elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		int[] b = new int[9];
+		int k=0;
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				b[k++]=a[i][j];
+			}
+		}
+
+		Arrays.sort(b);
+
+		k=0;
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j]=b[k++];
+			}
+		}
+
+		System.out.println("updated matrix: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix  elements:
+1 3 2
+5 9 4
+7 6 8
+updated matrix:
+1 2 3
+4 5 6
+7 8 9
+
+12. sort all the elements in row wise asc order
+-----------------------------------------------
+1 4 2 
+5 9 6
+7 3 9
+
+1 2 4
+5 6 9
+3 7 9
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int[][] a = new int[3][3];
+		int i,j;
+
+		System.out.println("Enter matrix  elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		for(i=0;i<3;i++)
+		{
+			Arrays.sort(a[i]);
+		}
+
+		System.out.println("updated matrix: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix  elements:
+1 4 2
+5 9 6
+7 3 8
+updated matrix:
+1 2 4
+5 6 9
+3 7 8
+
+13. sort all the elements in col wise asc order
+-----------------------------------------------
+1 4 2 
+7 9 8
+5 3 6
+
+1 3 2
+5 4 6
+7 9 8
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int[][] a = new int[3][3];
+		int i,j;
+
+		System.out.println("Enter matrix  elements: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		int[][] b = new int[3][3];
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				b[i][j]=a[j][i];
+			}
+		}
+
+		for(i=0;i<3;i++)
+		{
+			Arrays.sort(b[i]);
+		}
+
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				a[i][j]=b[j][i];
+			}
+		}
+		
+		System.out.println("updated matrix: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix  elements:
+1 4 2
+7 9 8
+5 3 6
+updated matrix:
+1 3 2
+5 4 6
+7 9 8
+
+14. swap two rows
+-----------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int[][] a = new int[4][4];
+		int i,j;
+
+		System.out.println("Enter matrix  elements: ");
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("original matrix: ");
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		int x,y;
+		System.out.println("Enter row1 value to swap: ");
+		x = obj.nextInt();
+		System.out.println("Enter row2 value to swap: ");
+		y = obj.nextInt();
+
+		for(i=0;i<4;i++)
+		{
+			int temp;
+			temp = a[x][i];
+			a[x][i] = a[y][i];
+			a[y][i] = temp;
+		}
+
+		System.out.println("updated matrix: ");
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+C:\test>java Test
+Enter matrix  elements:
+1 2 4 3
+3 4 5 1
+7 8 9 6
+9 9 9 9
+original matrix:
+1 2 4 3
+3 4 5 1
+7 8 9 6
+9 9 9 9
+Enter row1 value to swap:
+0
+Enter row2 value to swap:
+2
+updated matrix:
+7 8 9 6
+3 4 5 1
+1 2 4 3
+9 9 9 9
+
+15. swap two cols
+-----------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int[][] a = new int[4][4];
+		int i,j;
+
+		System.out.println("Enter matrix  elements: ");
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("original matrix: ");
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		int x,y;
+		System.out.println("Enter col1 value to swap: ");
+		x = obj.nextInt();
+		System.out.println("Enter col2 value to swap: ");
+		y = obj.nextInt();
+
+		for(i=0;i<4;i++)
+		{
+			int temp;
+			temp = a[i][x];
+			a[i][x] = a[i][y];
+			a[i][y] = temp;
+		}
+
+		System.out.println("updated matrix: ");
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+C:\test>java Test
+Enter matrix  elements:
+1 2 3 4
+5 6 7 8
+8 9 8 9
+1 3 5 6
+original matrix:
+1 2 3 4
+5 6 7 8
+8 9 8 9
+1 3 5 6
+Enter col1 value to swap:
+1
+Enter col2 value to swap:
+3
+updated matrix:
+1 4 3 2
+5 8 7 6
+8 9 8 9
+1 6 5 3
+
+16. swap main diagonal with opposite diagonal
+---------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int[][] a = new int[4][4];
+		int i,j;
+
+		System.out.println("Enter matrix  elements: ");
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				a[i][j] = obj.nextInt();
+			}
+		}
+
+		System.out.println("original matrix: ");
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+		for(i=0;i<4;i++)
+		{
+			int temp;
+			temp = a[i][i];
+			a[i][i] = a[i][4-i-1];
+			a[i][4-i-1] = temp;
+		}
+
+		System.out.println("updated matrix: ");
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+Enter matrix  elements:
+1 2 3 4
+5 6 7 8
+9 9 9 9
+1 1 2 2
+original matrix:
+1 2 3 4
+5 6 7 8
+9 9 9 9
+1 1 2 2
+updated matrix:
+4 2 3 1
+5 7 6 8
+9 9 9 9
+2 1 2 1
+
+07. CRUD Operations on Arrays
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C ---> Creation / Insertion
+R ---> Reading / Retriving
+U ---> Update 
+D ---> Delete
+
+a = [1, 2, 3, 4, 5]
+
+insert x at start, end, location
+read element from an array
+update y in array a
+delete one ele from array
+
+Reading / Retriving / Selecting
+-------------------------------
+case 1: index
+case 2: while loop
+case 3: for loop
+case 4: for each loop
+case 5: toString
+
+case 1: index concept
+---------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {10, 34, 21, 55, 39, 40};
+		//         0   1   2   3   4   5
+
+		System.out.println(a[0]);
+		System.out.println(a[1]);
+		System.out.println(a[2]);
+		System.out.println(a[3]);
+		System.out.println(a[4]);
+		System.out.println(a[5]);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+10
+34
+21
+55
+39
+40
+
+case 2: while loop
+------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {10, 34, 21, 55, 39, 40};
+		//         0   1   2   3   4   5
+
+		int index = 0;
+		while(index<a.length)
+		{
+			System.out.println(a[index]);
+			index++;
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+10
+34
+21
+55
+39
+40
+
+case 3: for loop
+----------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {10, 34, 21, 55, 39, 45};
+		//         0   1   2   3   4   5
+
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+10
+34
+21
+55
+39
+45
+
+case 4: for each loop
+---------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 22, 33, 44, 55, 66};
+		//         0   1   2   3   4   5
+
+		for(int item:a)
+		{
+			System.out.println(item);
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+11
+22
+33
+44
+55
+66
+
+case 5: toString()
+------------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 22, 33, 44, 55, 66};
+		//         0   1   2   3   4   5
+
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 22, 33, 44, 55, 66]
+
+Inserting an element into array
+-------------------------------
+case 1: inserting an element in to array at first location
+case 2: inserting an element in to array at end location
+case 3: inserting an element in to array at specific location
+
+case 1: inserting an element in to array at first location
+----------------------------------------------------------
+import java.util.*;
+class Test 
+{
+	static int[] insertAtFirst(int[] a ,int newElement)
+	{
+		int[] b = new int[a.length+1];
+		b[0] = newElement;
+		for(int i=0;i<a.length;i++)
+			b[i+1]=a[i];
+		return b;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 22, 33, 44, 55, 66};
+		//         0   1   2   3   4   5
+		System.out.println(Arrays.toString(a));
+		a = insertAtFirst(a,999);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 22, 33, 44, 55, 66]
+[999, 11, 22, 33, 44, 55, 66]
+
+case 2: inserting an element in to array at end location
+--------------------------------------------------------
+import java.util.*;
+class Test 
+{
+	static int[] insertAtLast(int[] a ,int newElement)
+	{
+		int[] b = new int[a.length+1];
+		int i;
+		for(i=0;i<a.length;i++)
+			b[i]=a[i];
+		b[i] = newElement;
+		//b[a.length]=newElement;
+		return b;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 22, 33, 44, 55, 66};
+		//         0   1   2   3   4   5
+		System.out.println(Arrays.toString(a));
+		a = insertAtLast(a,999);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>java Test
+[11, 22, 33, 44, 55, 66]
+[11, 22, 33, 44, 55, 66, 999]
+
+case 3: inserting an element in to array at specific location
+-------------------------------------------------------------
+import java.util.*;
+class Test 
+{
+	static int[] insertAtLocation(int[] a ,int newElement,int location)
+	{
+		int i;
+		int[] b = new int[a.length+1];
+		if(location<0 || location>=a.length){
+			return a;
+		}
+		for(i=0;i<location;i++)
+			b[i] = a[i];
+		b[i] = newElement;
+		for(;i<a.length;i++)
+			b[i+1]=a[i];
+		return b;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 22, 33, 44, 55, 66};
+		//         0   1   2   3   4   5
+		System.out.println(Arrays.toString(a));
+		a = insertAtLocation(a,999,3);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 22, 33, 44, 55, 66]
+[11, 22, 33, 999, 44, 55, 66]
+
+updating an element in an array
+-------------------------------
+case 1: updating an element in an array based on location
+case 2: update first occurrence of the given element
+case 3: update first and second occurrence of the given element
+case 4: update all occurrences of the given element
+case 5: update last occurrence of the given element
+
+case 1: updating an element in an array based on location
+---------------------------------------------------------
+import java.util.*;
+class Test 
+{
+	static int[] updateElementAtLocation(int[] a ,int nE,int location)
+	{
+		if(location<0 || location>=a.length){
+			return a;
+		}
+		a[location] = nE;
+		return a;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 12, 14, 15, 12, 16};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = updateElementAtLocation(a,999,4);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>java Test
+[11, 12, 13, 12, 14, 15, 12, 16]
+[11, 12, 13, 12, 999, 15, 12, 16]
+
+case 2: update first occurrence of the given element
+----------------------------------------------------
+import java.util.*;
+class Test 
+{
+	static int[] updateFirstOccurrence(int[] a ,int oE,int nE)
+	{
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]==oE)
+			{
+				a[i] = nE;
+				break;
+			}
+		}
+		return a;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 12, 14, 15, 12, 16};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = updateFirstOccurrence(a,12,888);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 12, 13, 12, 14, 15, 12, 16]
+[11, 888, 13, 12, 14, 15, 12, 16]
+
+case 3: update first and second occurrence of the given element
+---------------------------------------------------------------
+import java.util.*;
+class Test 
+{
+	static int[] updateFirstAndSecondOccurrence(int[] a ,int oE,int nE)
+	{
+		for(int i=0,c=0;i<a.length;i++)
+		{
+			if(a[i]==oE)
+			{
+				c++;
+				if(c<=2)
+					a[i] = nE;
+				else
+					break;
+			}
+		}
+		return a;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 12, 14, 15, 12, 16};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = updateFirstAndSecondOccurrence(a,12,888);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>java Test
+[11, 12, 13, 12, 14, 15, 12, 16]
+[11, 888, 13, 888, 14, 15, 12, 16]
+
+case 4: update all occurrences of the given element
+---------------------------------------------------
+import java.util.*;
+class Test 
+{
+	static int[] updateAllOccurrence(int[] a ,int oE,int nE)
+	{
+		for(int i=0,c=0;i<a.length;i++)
+		{
+			if(a[i]==oE)
+			{
+				a[i] = nE;
+			}
+		}
+		return a;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 12, 14, 15, 12, 16};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = updateAllOccurrence(a,12,888);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>java Test
+[11, 12, 13, 12, 14, 15, 12, 16]
+[11, 888, 13, 888, 14, 15, 888, 16]
+
+case 5: update last occurrence of the given element
+---------------------------------------------------
+import java.util.*;
+class Test 
+{
+	static int[] updateLastOccurrence(int[] a ,int oE,int nE)
+	{
+		for(int i=a.length-1;i>=0;i--)
+		{
+			if(a[i]==oE)
+			{
+				a[i] = nE;
+				break;
+			}
+		}
+		return a;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 12, 14, 15, 12, 16};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = updateLastOccurrence(a,12,888);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>java Test
+[11, 12, 13, 12, 14, 15, 12, 16]
+[11, 12, 13, 12, 14, 15, 888, 16]
+
+deleting an element from an array
+---------------------------------
+case 1: deleting an element from first location
+case 2: deleting an element from last location
+case 3: deleting an element from specified location
+case 4: deleting all the elements in an array
+case 5: deleting specified element
+case 6: deleting first occurrence of an element
+case 7: deleting first and second occurrence of an element
+case 8: deleting last occurrence of an element
+case 9: deleting all occurrences
+
+case 1: deleting an element from first location
+-----------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static int[] deleteAtFirstLoc(int[] a)
+	{
+		int[] b = new int[a.length-1];
+		for(int i=0;i<a.length-1;i++)
+			b[i] = a[i+1];
+		return b;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 14, 15, 16, 17, 18};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = deleteAtFirstLoc(a);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 12, 13, 14, 15, 16, 17, 18]
+[12, 13, 14, 15, 16, 17, 18]
+
+case 2: deleting an element from last location
+----------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static int[] deleteAtLastLoc(int[] a)
+	{
+		int[] b = new int[a.length-1];
+		for(int i=0;i<a.length-1;i++)
+			b[i] = a[i];
+		return b;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 14, 15, 16, 17, 18};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = deleteAtLastLoc(a);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 12, 13, 14, 15, 16, 17, 18]
+[11, 12, 13, 14, 15, 16, 17]
+
+case 3: deleting an element from specified location
+---------------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static int[] deleteAtLoc(int[] a,int location)
+	{
+		int[] b = new int[a.length-1];
+		int i,j;
+		if(location<0 || location>=a.length)
+		{
+			return a;
+		}
+		for(i=0,j=0;i<a.length;i++)
+		{
+			if(i!=location)
+			{
+				b[j++]=a[i];
+			}
+			else
+				continue;
+		}
+		return b;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 14, 15, 16, 17, 18};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = deleteAtLoc(a,3);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>java Test
+[11, 12, 13, 14, 15, 16, 17, 18]
+[11, 12, 13, 15, 16, 17, 18]
+
+case 4: deleting all the elements in an array
+---------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static int[] deleteAll(int[] a)
+	{
+		int[] b = new int[0];
+		return b;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 14, 15, 16, 17, 18};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = deleteAll(a);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 12, 13, 14, 15, 16, 17, 18]
+[]
+
+case 5: deleting specified element
+----------------------------------
+import java.util.*;
+class Test 
+{
+	public static int[] deleteAtLoc(int[] a,int location)
+	{
+		int[] b = new int[a.length-1];
+		int i,j;
+		if(location<0 || location>=a.length)
+		{
+			return a;
+		}
+		for(i=0,j=0;i<a.length;i++)
+		{
+			if(i!=location)
+			{
+				b[j++]=a[i];
+			}
+			else
+				continue;
+		}
+		return b;
+	}
+	public static int[] deleteElement(int[] a,int element)
+	{
+		int[] b = new int[a.length-1];
+		int i,location=-1;
+		for(i=0;i<a.length;i++)
+		{
+			if(element==a[i])
+			{
+				location=i;
+				break;
+			}
+		}
+		if(location!=-1)
+		{
+			b=deleteAtLoc(a,location);
+		}
+		else
+			return a;
+		return b;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 14, 15, 16, 17, 18};
+		//         0   1   2   3   4   5   6   7
+		System.out.println(Arrays.toString(a));
+		a = deleteElement(a,18);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 12, 13, 14, 15, 16, 17, 18]
+[11, 12, 13, 14, 15, 16, 17, 18]
+
+case 6: deleting first occurrence of an element
+-----------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static int[] deleteAtLoc(int[] a,int location)
+	{
+		int[] b = new int[a.length-1];
+		int i,j;
+		if(location<0 || location>=a.length)
+		{
+			return a;
+		}
+		for(i=0,j=0;i<a.length;i++)
+		{
+			if(i!=location)
+			{
+				b[j++]=a[i];
+			}
+			else
+				continue;
+		}
+		return b;
+	}
+	public static int[] deleteFirstOccurrence(int[] a,int element)
+	{
+		int[] b = new int[a.length-1];
+		int i;
+		for(i=0;i<a.length;i++)
+		{
+			if(element==a[i])
+			{
+				b=deleteAtLoc(a,i);
+				break;
+			}
+		}
+		return b;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 12, 15, 12, 17, 12, 18};
+		//         0   1   2   3   4   5   6   7   8
+		System.out.println(Arrays.toString(a));
+		a = deleteFirstOccurrence(a,12);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 12, 13, 12, 15, 12, 17, 12, 18]
+[11, 13, 12, 15, 12, 17, 12, 18]
+
+case 7: deleting first and second occurrence of an element
+----------------------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static int[] deleteAtLoc(int[] a,int location)
+	{
+		int[] b = new int[a.length-1];
+		int i,j;
+		if(location<0 || location>=a.length)
+		{
+			return a;
+		}
+		for(i=0,j=0;i<a.length;i++)
+		{
+			if(i!=location)
+			{
+				b[j++]=a[i];
+			}
+			else
+				continue;
+		}
+		return b;
+	}
+	public static int[] deleteFirstAndSecondOccurrence(int[] a,int element)
+	{
+		int i,c=0;
+		for(i=0;i<a.length;i++)
+		{
+			if(element==a[i])
+			{
+				c++;
+				a=deleteAtLoc(a,i);
+				if(c==2)
+					break;
+			}
+		}
+		return a;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 12, 15, 12, 17, 12, 18};
+		//         0   1   2   3   4   5   6   7   8
+		System.out.println(Arrays.toString(a));
+		a = deleteFirstAndSecondOccurrence(a,12);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 12, 13, 12, 15, 12, 17, 12, 18]
+[11, 13, 15, 12, 17, 12, 18
+
+case 8: deleting last occurrence of an element
+----------------------------------------------
+import java.util.*;
+class Test 
+{
+	public static int[] deleteAtLoc(int[] a,int location)
+	{
+		int[] b = new int[a.length-1];
+		int i,j;
+		if(location<0 || location>=a.length)
+		{
+			return a;
+		}
+		for(i=0,j=0;i<a.length;i++)
+		{
+			if(i!=location)
+			{
+				b[j++]=a[i];
+			}
+			else
+				continue;
+		}
+		return b;
+	}
+	public static int[] deleteLastOccurrence(int[] a,int element)
+	{
+		int i;
+		for(i=a.length-1;i>=0;i--)
+		{
+			if(element==a[i])
+			{
+				a=deleteAtLoc(a,i);
+				break;
+			}
+		}
+		return a;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 12, 15, 12, 17, 12, 18};
+		//         0   1   2   3   4   5   6   7   8
+		System.out.println(Arrays.toString(a));
+		a = deleteLastOccurrence(a,12);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 12, 13, 12, 15, 12, 17, 12, 18]
+[11, 12, 13, 12, 15, 12, 17, 18]
+
+case 9: deleting all occurrences
+--------------------------------
+import java.util.*;
+class Test 
+{
+	public static int[] deleteAtLoc(int[] a,int location)
+	{
+		int[] b = new int[a.length-1];
+		int i,j;
+		if(location<0 || location>=a.length)
+		{
+			return a;
+		}
+		for(i=0,j=0;i<a.length;i++)
+		{
+			if(i!=location)
+			{
+				b[j++]=a[i];
+			}
+			else
+				continue;
+		}
+		return b;
+	}
+	public static int[] deleteAllOccurrences(int[] a,int element)
+	{
+		int i;
+		for(i=0;i<a.length;i++)
+		{
+			if(element==a[i])
+			{
+				a=deleteAtLoc(a,i);
+			}
+		}
+		return a;
+	}
+	public static void main(String[] args) 
+	{
+		int[] a = {11, 12, 13, 12, 15, 12, 17, 12, 18};
+		//         0   1   2   3   4   5   6   7   8
+		System.out.println(Arrays.toString(a));
+		a = deleteAllOccurrences(a,12);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>java Test
+[11, 12, 13, 12, 15, 12, 17, 12, 18]
+[11, 13, 15, 17, 18]
+
+java.util.Arrays predefined class:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1) asList()
+-----------
+It returns a fixed size list for the given array elements.
+
+syntax:
+
+List asList(arrayElements);
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String[] s = {"Chiranjeevi","Nagarjuna","Balakrishna"};
+		List l1 = Arrays.asList(s);
+		List l2 = Arrays.asList(11, 22, 33, 44, 55);
+		System.out.println(l1);
+		System.out.println(l2);
+	}
+}
+
+C:\test>java Test
+[Chiranjeevi, Nagarjuna, Balakrishna]
+[11, 22, 33, 44, 55]
+
+2) toString()
+-------------
+This method returns String representation of content of the array.
+
+syntax:
+-------
+
+String toString([]);
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {111, 222, 333, 444};
+		System.out.println(a);
+		for(int item:a)
+			System.out.println(item);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>java Test
+[I@15db9742
+111
+222
+333
+444
+[111, 222, 333, 444]
+
+3) sort()
+---------
+This method is used to sort an array in asc order
+
+syntax:
+-------
+
+Arrays.sort(a);
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {111, 555, 222, 444, 333};
+		System.out.println(Arrays.toString(a));
+		Arrays.sort(a);
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[111, 555, 222, 444, 333]
+[111, 222, 333, 444, 555]
+
+4) customized sorting
+----------------------
+This method is used to sort an array in asc order with customized ranges
+
+syntax:
+-------
+
+Arrays.sort(a,start,end);
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {333, 555, 222, 444, 111};
+		//         0    1    2    3    4
+		System.out.println(Arrays.toString(a));
+		Arrays.sort(a,1,4);//sort from 1st loc to 4-1th loc
+		System.out.println(Arrays.toString(a));
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[333, 555, 222, 444, 111]
+[333, 222, 444, 555, 111]
+
+5) binary search case 1
+-----------------------
+syntax:
+-------
+
+int binarySearch(int[], int key);
+
+it is used to search for an element(key) in the given array. returns index value if element is found else returns -InsertionPoint-1. If we want to apply binary search compulsory array must be in sorted order.
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {111, 333, 555, 777, 999};
+		//         0    1    2    3    4
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.binarySearch(a,111));//0
+		System.out.println(Arrays.binarySearch(a,222));//-2
+		System.out.println(Arrays.binarySearch(a,333));//1
+		System.out.println(Arrays.binarySearch(a,444));//-3
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[111, 333, 555, 777, 999]
+0
+-2
+1
+-3
+
+6) binary search case 2
+-----------------------
+syntax:
+-------
+
+int binarySearch(int[], int start, int end, int key);
+
+it is used to search for an element(key) in the given array from given start value to end to value-1. returns index value if element is found else returns -InsertionPoint-1. If we want to apply binary search compulsory array must be in sorted order.
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {111, 333, 555, 777, 999};
+		//         0    1    2    3    4
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.binarySearch(a,2,5,111));//-3
+		System.out.println(Arrays.binarySearch(a,2,5,555));//2
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[111, 333, 555, 777, 999]
+-3
+2
+
+07) copy of method
+------------------
+This method copies the specified array, with new elements as 0 and length as given size.
+
+sytax:
+------
+			int[] copyOf(int[],int newSize)
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a1 = {11, 22, 33};
+		int[] a2 = Arrays.copyOf(a1,5);
+		System.out.println(Arrays.toString(a1));//[11, 22, 33]
+		System.out.println(Arrays.toString(a2));//[11, 22, 33, 0, 0]
+		a2[3] = 888;
+		a2[4] = 999;
+		System.out.println(Arrays.toString(a1));//[11, 22, 33]
+		System.out.println(Arrays.toString(a2));//[11, 22, 33, 888, 999]
+	}
+}
+
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[11, 22, 33]
+[11, 22, 33, 0, 0]
+[11, 22, 33]
+[11, 22, 33, 888, 999]
+
+08) copy of range
+-----------------
+syntax:
+
+int[] copyOfRange(int[],int start,int end);
+
+This method copies specified range of values from start loc to end loc-1
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a1 = {11, 22, 33, 44, 55, 66};
+		//          0   1   2   3   4   5
+		int[] a2 = Arrays.copyOfRange(a1,1,4);
+		System.out.println(Arrays.toString(a1));//[11,22,33,44,55,66]
+		System.out.println(Arrays.toString(a2));//[22,33,44]
+	}
+}
+
+C:\test>java Test
+[11, 22, 33, 44, 55, 66]
+[22, 33, 44]
+
+09) equals method
+------------------
+syntax:
+-------
+boolean equals(int[],int[]);
+
+it returns true if both arrays are having same content else false
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a1 = {11, 22, 33};
+		int[] a2 = {11, 22, 33};
+		int[] a3 = {11, 33, 22};
+		int[] a4 = {11, 22, 44};
+
+		System.out.println(Arrays.equals(a1,a2));//true
+		System.out.println(Arrays.equals(a1,a3));//false
+		System.out.println(Arrays.equals(a1,a4));//false
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+true
+false
+false
+
+10) fill method case 1
+----------------------
+syntax:
+-------
+void fill(int[],value);
+
+it fill all the elements in an array with given element.
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a1 = new int[3];
+		int[] a2 = new int[3];
+		int[] a3 = new int[3];
+
+		System.out.println(Arrays.toString(a1));//[0,0,0]
+		System.out.println(Arrays.toString(a2));//[0,0,0]
+		System.out.println(Arrays.toString(a3));//[0,0,0]
+		Arrays.fill(a1,999);
+		Arrays.fill(a2,0);
+		Arrays.fill(a3,111);
+		System.out.println(Arrays.toString(a1));//[999,999,999]
+		System.out.println(Arrays.toString(a2));//[0,0,0]
+		System.out.println(Arrays.toString(a3));//[111,111,111]
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[999, 999, 999]
+[0, 0, 0]
+[111, 111, 111]
+
+11) fill method case 2
+----------------------
+syntax:
+-------
+void fill(int[],int start,int end,int value);
+
+it fill all the elements in an array with given element from start to end-1.
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		System.out.println(Arrays.toString(a));//[1,2,3,4,5,6,7,8,9,10]
+		Arrays.fill(a,1,5,999);
+		System.out.println(Arrays.toString(a));//[1,999,999,999,999,6,7,8,9,10]
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[1, 999, 999, 999, 999, 6, 7, 8, 9, 10]
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+13 july string Data Structure:
+~~~~~~~~~~~~~~~~~~~~~~
+Introduction:
+-------------
+=> Collection / Group / Sequence of characters is called as string.
+=> In java string is treated as an Object.
+=> If we consider any application, most commonly used object String.
+
+Ex: voter management system
+	
+		voter id ----> int
+		name --------> string
+		fathername --> string
+		cont --------> string
+		dist --------> string
+		mbl ---------> int
+		addr --------> string
+		etc
+
+		90% of data is nothing but string****
+
+=> In java predefined string classes are existed, just we have use.
+=> Java provided strings in four forms, based on our requirement
+
+	 1) java.lang.String
+	 2) java.lang.StringBuffer
+	 3) java.lang.StringBuilder
+	 4) java.util.StringTokenizer
+
+=> String class objects are immutable objects, if we are trying to perform any modifications, it wn't accept those modification but with those modifications a new object will be created, this concept is called as "IMMUTABILITY". (modifications are not allowed).
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s = new String("abc");
+		System.out.println(s);
+		s.concat("def");//concat is used to add new string into existing str
+		System.out.println(s);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+abc
+abc
+
+=> StringBuffer class objects are mutable objects, if we are trying to perform any modifications, it accept those modification, with those modifications a new object wn't be created, this concept is called as "MUTABILITY". (modifications are allowed).
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		StringBuffer sb = new StringBuffer("abc");
+		System.out.println(sb);//abc
+		sb.append("def");//concatenation
+		System.out.println(sb);//abcdef
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+abc
+abcdef
+
+=> It is same as StringBuffer.
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		StringBuilder sb = new StringBuilder("ijk");
+		System.out.println(sb);//ijk
+		sb.append("mno");//concatenation
+		System.out.println(sb);//ijkmno
+	}
+}
+
+=> StringBuffer objects are synchronized objects i.e. only one thread
+=> StringBuilder objects are non-synch obj i.e. multiple threads
+
+=> StringTokenizer is an utility class, which is used to divide the given string into tokens.
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s = new String("data structures and algs with java");
+		StringTokenizer st = new StringTokenizer(s);
+		while(st.hasMoreTokens())
+		{
+			System.out.println(st.nextToken());
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+data
+structures
+and
+algs
+with
+java
+
+Heap Memoery area and SCP (String Constant Pool) memory area
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+case 1:
+-------
+String s = new String("prakash");
+
+heap ---> 1
+scp ----> 1
+total --> 2
+
+=> When ever we are creating a string obj using double quotes "SCP"
+=> when ever we are creating a string obj using new keyword "HEAP"
+
+case 2:
+-------
+String s = "prakash";
+
+heap ---> 0
+scp ----> 1
+total --> 1
+
+case 3:
+-------
+String s1 = new String("abc");
+String s2 = new String("abc");
+String s3 = "abc";
+String s4 = "abc";
+
+heap ----> 2
+scp -----> 1
+total ---> 3
+
+
+=> obj creation in SCP is always optional, first JVM will check is there any obj already created in SCP with same content, then new obj wn't be created in SCP.
+=> there is no chance of existing two objects with same content on SCP
+=> duplicate objects are not allowed in SCP
+
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s1 = new String("abc");
+		String s2 = new String("abc");
+		String s3 = "abc";
+		String s4 = "abc";
+		System.out.println(s1==s2);//false
+		System.out.println(s3==s4);//true
+	}
+}
+
+case 3:
+-------
+String s = new String("abc");
+s.concat("def");
+s=s.concat("xyz");
+
+heap -----> 3
+scp ------> 3
+total ----> 6
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s = new String("abc");
+		s.concat("def");
+		s=s.concat("xyz");
+		System.out.println(s);//abcxyz
+	}
+}
+
+case 4:
+-------
+String s1 = new String("spring");
+s1.concat("fall");
+String s2 = s1.concat("winter");
+s2.concat("summer");
+System.out.println(s1);//spring
+System.out.println(s2);//springwinter
+
+
+heap -----> 4
+scp ------> 4
+total ----> 8
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s1 = new String("spring");
+		s1.concat("fall");
+		String s2 = s1.concat("winter");
+		s2.concat("summer");
+		System.out.println(s1);//spring
+		System.out.println(s2);//springwinter
+	}
+}
+
+
+String class constructors & methods
+StringBuffer class constructors & methods
+StringBuffer vs StringBuilder
+String vs StringBuffer vs StringBuilder
+StringTokenizer class constructors & methods
+String vs StringBuffer vs StringBuilder vs StringTokenizer
+Regular Expressions
+Programs on String (50 programs)
+
+10. Recursion and its applications
+11. Backtracking
+12. Dynamic Programming
+13. Greedy Algorithms
+14. Sorting Methods
+15. Divide and Conquer Algorithms
+16. Searching Algorithms
+17. Bit manipulations
+18. Linked List data structure (SLL, DLL, CSLL, CDLL)
+19. Stack Data Structure
+20. Queue Data Structure
+21. Hashtable Data Structure
+22. Tree Data Structures (Tree, BT, BST, AVL)
+23. Priority Queues or Heap Data Structure (Heap Sort)
+24. Graph Data Structure
+25. Hashing
+
+
+
+K Prakash Babu
+9985852216
+
+Name:
+Batch: DSAJB6
+Timings: 7am
+Emailid: 
