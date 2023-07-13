@@ -1,0 +1,233 @@
+String Data Structure:
+~~~~~~~~~~~~~~~~~~~~~~
+Introduction:
+-------------
+=> Collection / Group / Sequence of characters is called as string.
+=> In java string is treated as an Object.
+=> If we consider any application, most commonly used object String.
+
+Ex: voter management system
+	
+		voter id ----> int
+		name --------> string
+		fathername --> string
+		cont --------> string
+		dist --------> string
+		mbl ---------> int
+		addr --------> string
+		etc
+
+		90% of data is nothing but string****
+
+=> In java predefined string classes are existed, just we have use.
+=> Java provided strings in four forms, based on our requirement
+
+	 1) java.lang.String
+	 2) java.lang.StringBuffer
+	 3) java.lang.StringBuilder
+	 4) java.util.StringTokenizer
+
+=> String class objects are immutable objects, if we are trying to perform any modifications, it wn't accept those modification but with those modifications a new object will be created, this concept is called as "IMMUTABILITY". (modifications are not allowed).
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s = new String("abc");
+		System.out.println(s);
+		s.concat("def");//concat is used to add new string into existing str
+		System.out.println(s);
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+abc
+abc
+
+=> StringBuffer class objects are mutable objects, if we are trying to perform any modifications, it accept those modification, with those modifications a new object wn't be created, this concept is called as "MUTABILITY". (modifications are allowed).
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		StringBuffer sb = new StringBuffer("abc");
+		System.out.println(sb);//abc
+		sb.append("def");//concatenation
+		System.out.println(sb);//abcdef
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+abc
+abcdef
+
+=> It is same as StringBuffer.
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		StringBuilder sb = new StringBuilder("ijk");
+		System.out.println(sb);//ijk
+		sb.append("mno");//concatenation
+		System.out.println(sb);//ijkmno
+	}
+}
+
+=> StringBuffer objects are synchronized objects i.e. only one thread
+=> StringBuilder objects are non-synch obj i.e. multiple threads
+
+=> StringTokenizer is an utility class, which is used to divide the given string into tokens.
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s = new String("data structures and algs with java");
+		StringTokenizer st = new StringTokenizer(s);
+		while(st.hasMoreTokens())
+		{
+			System.out.println(st.nextToken());
+		}
+	}
+}
+
+C:\test>javac Test.java
+
+C:\test>java Test
+data
+structures
+and
+algs
+with
+java
+
+Heap Memoery area and SCP (String Constant Pool) memory area
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+case 1:
+-------
+String s = new String("prakash");
+
+heap ---> 1
+scp ----> 1
+total --> 2
+
+=> When ever we are creating a string obj using double quotes "SCP"
+=> when ever we are creating a string obj using new keyword "HEAP"
+
+case 2:
+-------
+String s = "prakash";
+
+heap ---> 0
+scp ----> 1
+total --> 1
+
+case 3:
+-------
+String s1 = new String("abc");
+String s2 = new String("abc");
+String s3 = "abc";
+String s4 = "abc";
+
+heap ----> 2
+scp -----> 1
+total ---> 3
+
+
+=> obj creation in SCP is always optional, first JVM will check is there any obj already created in SCP with same content, then new obj wn't be created in SCP.
+=> there is no chance of existing two objects with same content on SCP
+=> duplicate objects are not allowed in SCP
+
+
+Ex:
+---
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s1 = new String("abc");
+		String s2 = new String("abc");
+		String s3 = "abc";
+		String s4 = "abc";
+		System.out.println(s1==s2);//false
+		System.out.println(s3==s4);//true
+	}
+}
+
+case 3:
+-------
+String s = new String("abc");
+s.concat("def");
+s=s.concat("xyz");
+
+heap -----> 3
+scp ------> 3
+total ----> 6
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s = new String("abc");
+		s.concat("def");
+		s=s.concat("xyz");
+		System.out.println(s);//abcxyz
+	}
+}
+
+case 4:
+-------
+String s1 = new String("spring");
+s1.concat("fall");
+String s2 = s1.concat("winter");
+s2.concat("summer");
+System.out.println(s1);//spring
+System.out.println(s2);//springwinter
+
+
+heap -----> 4
+scp ------> 4
+total ----> 8
+
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String s1 = new String("spring");
+		s1.concat("fall");
+		String s2 = s1.concat("winter");
+		s2.concat("summer");
+		System.out.println(s1);//spring
+		System.out.println(s2);//springwinter
+	}
+}
+
+
+String class constructors & methods
+StringBuffer class constructors & methods
+StringBuffer vs StringBuilder
+String vs StringBuffer vs StringBuilder
+StringTokenizer class constructors & methods
+String vs StringBuffer vs StringBuilder vs StringTokenizer
+Regular Expressions
+Programs on String (50 programs)
