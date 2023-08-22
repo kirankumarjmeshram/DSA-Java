@@ -1,0 +1,13 @@
+Queue is a linear data structure which follows FIFO method. First-In-First-Out. the item which is inserted first will be the item which is removed first. Here we have to maintain two pointers front & rear. When ever an item is inserted into queue then rear variable will be incremented by one unit and when ever item is removed from the queue then front variable will be incremented by one unit.
+
+The following are the different operations that we can able to perform
+
+1. insertion
+2. deletion
+3. displaying
+
+The following are the different types of Queues existed
+
+1. Normal Queue
+2. Circular Queue
+3. Dequeue
