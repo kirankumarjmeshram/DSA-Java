@@ -1,0 +1,26 @@
+stack is a basic linear data structure that orgaizes elements in Last-In-First-Out LIFO method, 
+the object which is inserted at last will be the object that is removed first.
+
+Ex:
+	stack of plats / books / records
+
+a stack allows you to access only one element from the top of stack / one direction i.e. top. 
+when ever we are inserting a new object into stack then top value will be incremented by one unit. 
+when ever we are removed one element from the stack then top variable will be decremented by one unit.
+
+common operations on stack
+--------------------------
+The following are the common operations that can be performed on stack.
+
+1. push() ----> inserting an element into the stack
+2. pop() -----> deleting an element from the stack
+3. peek() ----> return top most element in the stack
+4. isEmpty()--> returns true if stack is empty else false
+5. size() ----> return number of elements in the stack
+6. search() --> return true if the element is existed else false
+
+The following are the various representations that we are using for stack
+
+1. implementation of stack using arrays.
+2. implementation of stack by using linked list.
+3. implementation of stack using predefined library.
