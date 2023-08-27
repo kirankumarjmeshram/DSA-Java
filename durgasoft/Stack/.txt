@@ -24,3 +24,39 @@ The following are the various representations that we are using for stack
 1. implementation of stack using arrays.
 2. implementation of stack by using linked list.
 3. implementation of stack using predefined library.
+
+
+
+
+Expression is a combination of operators and operands. 
+all the expressions in the programming are divided into the following three types.
+
+1) infix expressions -------> operand OPERATOR operand
+2) prefix expressions ------> OPERATOR operand operand
+3) postfix expressions -----> operand operand OPERATOR
+
+Ex: a+b
+
+infix ------> a+b
+prefix -----> +ab
+postfix ----> ab+
+
+infix to postfix conversion
+---------------------------
+examples
+--------
+a+b ------> ab+
+a*b+c ----> ab*c+
+a+b*c ----> abc*+
+
+infix to postfix conversion algorithm:
+--------------------------------------
+1. read the expression from left to right.
+2. if the input symbol is '(' then push it into the stack.
+3. if the input symbol is an operand then put it into output.
+4. if the input symbol is an operator then
+   i. check the precedence of an operator inside the stack is having greater priority then the precedence of incoming symbol, then remove that operator from stack and push it into the output.
+   ii. otherwise push that operator into stack
+5. if the input symbol is ')' then pop all the operators from stack and place them into output until open parenthis is encountered.
+6. if the symbols are extracted from input then pop all items from stack and append to the result
+7. print output
