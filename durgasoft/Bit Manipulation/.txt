@@ -1,0 +1,137 @@
+Bitmanipulations:
+~~~~~~~~~~~~~~~~~
+
+Introduction to Number Systems:
+-------------------------------
+A digital system can understand the digits by using the following components
+
+1. Digit
+2. Position of digit
+3. Base of the number system
+
+Types of Number SYstems:
+------------------------
+The main purpose of Number Systems are used to represent the numbers in digit systems.
+
+1. Binary Number System ------> base:2 ---> 0, 1
+2. Decimal Number System -----> base:10 --> 0,1,2,3,4,5,6,7,8,9
+3. Octal Number System -------> base:8 ---> 0,1,2,3,4,5,6,7
+4. Hexadecimal Num System ----> base:16 --> 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+
+Decimal 			Binary 			Octal 		Hexadecimal
+-----------------------------------------------
+0 						0000 				0 				0
+1 						0001 				1 				1
+2 						0010 				2 				2
+3 						0011 				3 				3
+4 						0100 				4  				4
+5 						0101 				5 				5
+6 						0110 				6 				6
+7 						0111 				7  				7
+8 						1000 				10  			8
+9 						1001				11  			9
+10 						1010				12 				a
+11 						1011 				13 				b
+12 						1100 				14 				c
+13 						1101				15 				d
+14 						1110 				16 				e
+15 						1111 				17 				f
+
+Decimal to Binary Conversion:
+-----------------------------
+Method1:
+--------
+1. divide the number by 2, where it gives Qutient and Remainder.
+2. We have to store reaminder in a container.
+3. Print stored values in reverse order.
+
+Ex:
+		N = 13
+
+						Quotient 		Remainder
+		13/2 		6 					1
+		6/2 		3 					0
+		3/2 		1 					1
+		1/2 		0 					1
+
+		Ans: 1101 
+
+Method2:
+--------
+Find binary equivalent for given number is 8-4-2-1 code
+
+					 8 4 2 1
+N=13 ----> 1 1 0 1
+N=12 ----> 1 1 0 0
+N=10 ----> 1 0 1 0
+
+Binary to Decmial Conversion:
+-----------------------------
+Method1:
+--------
+1. Read symbols from right to left.
+2. multiply each bit with 2 power x where x = 0,1,2,3,4, etc
+3. Sum of this values is nothing but decimal
+
+Ex:
+	  1101
+
+	  1 x 2^0 = 1x1 = 1
+	  0 x 2^1 = 0x2 = 0
+	  1 x 2^2 = 1x4 = 4
+	  1 x 2^3 = 1x8 = 8
+	  ------------------
+	  			          13
+
+Method2:
+--------
+By using 8-4-2-1 code
+
+Ex:
+    8421 
+		1010 ----> 10
+
+Bitwise operators:
+------------------
+==> It is a sepcial operators that existed in all most all PLs.
+==> It is an efficient way.
+==> It is very fast when compared with other operators.
+==> It requires linear time for execution.
+==> Easy to implement.
+
+1. bitwise and -----> &
+2. bitwise or ------> |
+3. bitwise x-or ----> ^
+4. bitwise leftshift ---> <<
+5. bitwise rightsift ---> >>
+6. bitwise complement --> ~
+
+bitwise &, | and ^
+
+
+val1    val2     val1 & val2    val1 | val2    val1 ^ val2
+-----------------------------------------------------------
+0 			0 			 0              0              0
+0 			1        0              1              1
+1 			0        0              1              1
+1 			1        1              1              0
+
+bitwise left shift  a<<b -----> a*2^b
+bitwise right shift a>>b -----> a/2^b
+
+bitwise complement -----------> ~n = -(n+1)
+
+Advantages:
+-----------
+1. Speed 
+2. Space optimization
+3. Bit manipulations
+4. Code simplification
+5. Readability will be improved
+6. Data encryption etc
+
+Bitwise NOT(~)
+//a = 5; // 00000000000000000000000000000101
+// (~a); // 11111111111111111111111111111010
+// 0=> -1
+//~127 => -128
