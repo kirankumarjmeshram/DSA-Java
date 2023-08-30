@@ -135,3 +135,24 @@ Bitwise NOT(~)
 // (~a); // 11111111111111111111111111111010
 // 0=> -1
 //~127 => -128
+
+XOR ^ is a bitwise operator
+If input bits are the same, then the output will be false(0) else true(1)
+
+a  |  b  | a ^ b
+----|-----|------
+ 0  |  0  |  0
+ 0  |  1  |  1
+ 1  |  0  |  1
+ 1  |  1  |  0
+
+ 97^32 = 65 ie: a=97, A= 65
+ 98^32 = 66 
+ 99^32 = 67 
+
+OR | is a bitwise operator
+If both of the bits are 0 , the result of that bit is 0 ; otherwise, the result is 1 
+
+65|32 = 97  A => a
+67|32 = 97
+68|32 = 98
