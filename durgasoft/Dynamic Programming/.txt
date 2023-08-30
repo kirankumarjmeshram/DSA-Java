@@ -1,0 +1,18 @@
+Dynamic Programming:
+--------------------
+==> almost it is same like recursion
+==> recursion with optimized solution is nothing but DP
+
+What is dynamic programming?
+----------------------------
+dynamic programming is optimized recursion process.
+
+How to identify DP is applicable for a problemm.
+
+1. optimal problem
+2. same calculation repeatedly used
+
+There are two ways are there to solve DP
+
+1. memoization (top-down) (recursion, reuse the solutions)
+2. tabulation (bottom-up) (arrays)
