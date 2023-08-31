@@ -1,0 +1,352 @@
+Print "Hello World" by using Java
+---------------------------------
+class Test
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Hello World");
+	}
+}
+
+=> Hello World
+----
+import java.util.*;
+class Test
+{
+	int x,y;
+	Demo(int x,int y){
+		this.x = x;
+		this.y = y;
+	}
+	int getX(){
+		return x;
+	}
+	int getY(){
+		return y;
+	}
+}
+class Test
+{
+	public static void main(String[] args)
+	{
+		Demo obj = new Demo(10,20);
+		System.out.println(obj.getX());
+		System.out.println(obj.getY());
+	}
+}
+
+10
+20
+
+Chapter: 01. Introduction data structures and algorithms
+--------------------------------------------------------
+Problem ----> Idea ----> Algorithm ----> Flowchart ----> Program ----> Ouput (solution)
+
+Algorithm:
+----------
+Step by Step process to solve a problem is called as an algorithm.
+
+problem: addition of two numbers
+--------------------------------
+algorithm:
+----------
+				step1: read 'a' value from user as integer
+				step2: read 'b' value from user as integer
+				step3: logic --> c = a + b
+				step4: print the values c as a result
+
+flowchart:
+----------
+digrametic or pictorial representation of an algorithm is called as flow chart.
+
+advantages of algorithms:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+==> problem will be simplified.
+==> easy to understand the problem statement.
+==> easy to implement by using any programing language.
+==> we will get a fromat / template / pattern for solving the problems.
+
+properties of algorithms:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+1) every algorithm should take zero of more inputs.
+2) every algorithm should print atleast one output.
+3) deterministic (input ---> output same thing should happend if run again and again)
+4) correct
+5) terminate finate number of steps
+6) efficient (logic should be clear)
+
+types of algorithms:
+~~~~~~~~~~~~~~~~~~~~
+1) simple algorithms
+2) math algorithms
+3) recursive algorithms
+4) divide and conquer algorithms
+5) back tracking algorithms
+6) dynamic programming
+7) greedy algorithsm
+8) searching and sorting algs
+etc
+
+data structures:
+----------------
+Data structure is the concept of organizing the data. data structures are classfied into 2 types
+
+1) linear data structures
+2) non linear data data structures
+
+linear data structures:
+-----------------------
+data, allocation of memory for that data is in continues manner.
+
+Ex:
+	arrays
+	strings
+	linked list
+	stack
+	queue
+	etc
+
+non-linear data structures:
+---------------------------
+data, allocation of memory for that data is random memory allocations.
+
+Ex:
+	trees
+	heaps
+	graphs
+	etc
+
+The following are the basic operations that we can perform on any data structures
+
+1) inserting
+2) deleting
+3) updating
+4) searching
+5) sorting etc
+
+
+ARRAY:
+------
+it is a collection similar type of elements.
+
+Creation / Insert
+Reading 
+Update
+Delete
+
+STRING:
+------
+it is a collection group of characters.
+
+Creation / Insert
+Reading 
+Update
+Delete
+
+LINKED LIST:
+------------
+it is a collection of single or double nodes
+
+SLL, DLL, CSLL, CDLL
+
+insert ----> first, last, location, sorted insertion asc/del
+delete ----> first, last, location, element, elements
+search ----> true or false, index of that element
+
+STACK:
+------
+it is collection of objects, method used in stack LIFO
+
+push
+pop
+peek
+search
+
+QUEUE:
+------
+it is also collection of objects, method used in queue FIFO
+
+insert
+delete
+display etc
+
+TREE:
+-----
+it is a collection of nodes.
+
+TREE, BINARY TREE, BINARY SEARCH TREE, AVL TREES
+
+insert
+delete
+search
+applications
+etc
+
+GRAPH:
+------
+it is a collection of vertices and edges
+
+GRAPH, BFS, DFS, SHORTEST PATH, etc
+
+
+
+approaches to solve any problem:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Theoritical knowlege is essential but it is insufficient to solve the problem. the following are the main approaches to solve any problem in the real word.
+
+1) constraints 
+2) idea generation
+3) complexities analysis
+4) coding
+5) testing
+
+1) constraints 
+--------------
+Given problem constraints are very very imp, first we have to identify all the constraints related to the given problem..
+
+Ex:
+	sorting the data in asc order
+
+	1. ASC order and DESC order
+	2. Number of elements
+	3. Type of elements
+
+2) idea generation
+------------------
+* more if you practice, you will get idea.
+* by practicing you will get a pattern of the problem.
+* easily we can solve unseen problems
+  1. try to simplify task at hand
+  2. few examples (apply)
+  3. think about suitable data structure
+  4. think about similar problem that you solved
+
+3) complexities analysis
+------------------------
+==> finding the solution for a problem is not sufficient.
+==> find a solution which is fast and take less memory.
+==> calcualte time and space complexity of the given alg
+
+4) coding
+----------
+==> if you have all the data, then we can write code
+==> select any programming langauge (JAVA)
+==> select proper IDE
+==> and try to write modular code (functions/methods) [resuability]
+
+5) testing
+----------
+==> after completion of program, validations
+==> apply varies test cases and solve
+
+normal test cases              -----> basic examples
+edge test cases/corner test cases ---> failure or invalid test case
+
+
+0 1 2 3 4
+
+insert 999, at -4th location
+insert 999, at 10th location
+
+Chapter:02. Analysis of algorithms (complexity calculation)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+complexity of an algorithm or program is the amount of time and space required to complete its execution. there are two types of complexities.
+
+1) time complexity T(n) ----> amount of time taken
+2) space complexity S(n) ---> amount of space required
+
+Note: sec, msec, nsec, bits, bytes, kb, mb etc
+
+
+Asymptotic Notations or Asymptotoc Analysis
+-------------------------------------------
+calculating running time and space of any algorithm in mathmetic units of computation is called as asymptotic notations.
+
+1) big-oh notation (O)
+2) omega notation (W)
+3) theta notation (0)
+
+
+complexity analysis of an algorithm
+------------------------------------
+worst case complexity -------> max steps required by al alg ------> O
+best case complecity --------> min steps required by an alg ------> W
+average case complexity -----> avg steps required by an alg ------> 0
+
+
+Ex: 10 elements ---> 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+
+search 100 -----> n -----> worst case
+search 10 ------> 1 -----> best case
+search 50 ------> n/2 ---> avg case
+
+Note: we will represent time complexity of an alg max by using WORST CASE.
+
+
+growth of functions
+-------------------
+
+constant time O(1)
+------------------
+algorithm/program is going to take constant time
+
+Ex:
+---
+	accessing nth element from an array
+	push/pop/peek operations in stack
+	insert/delete operations in queue
+	search operation in hashtable
+	etc
+
+linear time O(n)
+----------------
+execution of alg/prg is directly proportional to input size.
+
+Ex:
+	linear search on array
+	finding max element in an array
+	traversal of a tree
+	etc
+
+logarithmic time O(logn)
+------------------------
+execution of alg/prg is depending on logarithmic time of input size
+
+Ex:
+	binary search
+	all divide and conquer algorithms
+	etc
+
+quadratic time O(n2)
+--------------------
+execution of alg/prg is depending on quatratic time of input size
+
+Ex:
+	bubble sort
+	selection sort
+	insertion sort
+	etc
+
+
+Exponential time O(2^n)
+-----------------------
+execution of alg/prg is depending on exponential of input size
+
+Ex:
+	power set
+	sub sets
+	etc
+
+factorial time O(n!)
+--------------------
+All possible permutations of all elements of input size are generated
+
+Ex:
+	finding permutations of string, arrays, numbers etc
+
+	a ----> a ---> 1
+	ab ---> ab, ba --> 2
+	abc --> abc, acb, bac, bca, cab, cba ---> 6
+	abcd --> 24
+	abcde --> 120
+
