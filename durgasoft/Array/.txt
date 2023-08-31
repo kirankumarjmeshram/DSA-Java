@@ -1,0 +1,187 @@
+introduction:
+-------------
+a variable is name of memory location, where we can store a signle value. 
+
+int x = 10;
+System.out.println(x); // 10
+----
+----
+x = 12;
+System.out.println(x); // 12
+----
+----
+x = 999;
+System.out.println(x); // 999
+
+a variable can hold only one value at a time. to overcome this problem we can go for arrays
+
+==> array is collection/group of items (values) of same type
+==> all these values are stored under a common name.
+==> all these values must of same type (homogeneous type).
+==> all these values are stored in continues memory locations.
+==> we can access the values present inside an array by using index cocept.
+==> array is considered as basic data structure.
+
+Ex:
+	Student s1 = new Student();
+	Student s2 = new Student();
+	Student s3 = new Student();
+	.
+	.
+	Student s100 = new Student();
+
+Ex:
+	Student s[] = new Student[100];
+
+	s[0] = new Student();
+	s[1] = new Student();
+	.
+	.
+	s[99] = new Student();
+
+advantages of arrays:
+---------------------
+1. it collects group of items.
+2. only one name is sufficient to represent all objects.
+3. we have index concept is there.
+4. insertion order is preserved (in which order we stored same order will get).
+5. duplicates are allowed.
+
+disadvantages of arrays:
+------------------------
+1. it is fixed in size.
+2. it collects similar type of data only.
+3. no inbuilt methods.
+
+variable ----> arrays ----> colections (ADTS)
+
+
+
+declaration of an array
+~~~~~~~~~~~~~~~~~~~~~~~
+before using an array, compolusry we have to declare the array. the following syntax is used to declare an array.
+
+syntax:
+			datatype arrayname[];
+			datatype arrayname[][];
+			datatype arrayname[][][];
+
+[] ----> 1-D
+[][] --> 2-D
+[][][]-> 3-D
+
+Ex:
+---
+		int x[];
+		int y[][];
+		int z[][][];
+
+
+Note1: int x[10]; ----> it is valid in c but not in java
+Note2: int x[]; ------> it is valid in java but not in c
+
+Note:
+		int x[];
+		int []x;
+		int[] x; ----> recoomended 
+
+
+
+creation of arrays:
+~~~~~~~~~~~~~~~~~~~
+once if an array is declared, we can create array by using 'new' keyword. i.e. in java array is considered as an object.
+
+Ex:
+		int x[];
+		x = new int[5];
+
+Ex:
+		int[] x = new int[5];
+
+Ex:
+		int a[][];
+		a = new int[3][3];
+
+Ex:
+		int[][] a = new int[3][];
+
+		a[0] = new int[2];
+		a[1] = new int[1];
+		a[2] = new int[3];
+
+Note1: int[][] x = new int[3][]; ----> valid
+Note2: int[][] x = new int[][3]; ----> invalid
+
+
+initialization of an array elements
+-----------------------------------
+Once if we perform declaration and creation of arrays, then we can initialize values for theose array elements.
+
+Ex:
+---
+		int[] x = new in[3];
+		x[0] = 111;
+		x[1] = 222;
+		x[2] = 333;
+
+		System.out.println(x[0]);//111
+		System.out.println(x[1]);//222
+		System.out.println(x[2]);//333
+
+Ex:
+---
+		int[] x = new in[3];
+
+		System.out.println(x[0]);//0
+		System.out.println(x[1]);//0
+		System.out.println(x[2]);//0
+
+Note: If we are not providing any default values, then following are the default values assigned by java.
+
+integers ------> 0
+double --------> 0.0
+char ---------->
+boolean -------> false
+object --------> null
+
+
+declaration, creation and initialization of an array in single line
+-------------------------------------------------------------------
+Ex:
+		int a[];
+		a = new int[4];
+		a[0] = 111;
+		a[1] = 222;
+		a[2] = 333;
+		a[3] = 444;
+
+
+Ex:
+		int[] a = {111, 222, 333, 444};
+
+Ex:
+		int[][] b = {{1, 2},{3, 4}};		
+		int[][] c = {{1,2,3}, {4,5,6}, {7,8,9}};
+		int[][] d = {{1,2},{3},{4,5,6,7}};
+
+index concept:
+--------------
+It is used to access the elements one by one from an array. index value is always an int value starting from 0th location to n-1 th location, where n is size of the array.
+
+Ex:
+		n=4
+		a[0] ----> 1st element
+		a[1] ----> 2nd element
+		a[2] ----> 3rd element
+		a[3] ----> 4th element
+
+Note: if we are trying to access the elements by using -ve index we will get runtime error
+
+Ex:
+		int[] a = {1,2,3,4};
+
+		a[0] ----> 1
+		a[1] ----> 2
+		a[2] ----> 3
+		a[3] ----> 4
+		a[4] ----> Runtime Error
