@@ -1,0 +1,35 @@
+01 Basic
+    01. Implement program to swap given two integer values.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    02. Implement a program to find max and min of two numbers.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    3) print the result
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    03. Implement a program to find max and min of three numbers.
+    -------------------------------------------------------------
+    04. Implement a program to find max and min of four numbers.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    05. Implement a program to check whether the given number is even or odd.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    06. sum of n natural numbers
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    07. factorial of the given number
+    ---------------------------------
+    8) prime number or not
+    ----------------------
+    9) extract digits from the given number
+    ---------------------------------------
+    10) reverse of the given number
+    -------------------------------
+    11) check whether the given number is paliandrome number of not.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    12) amstrong number of not
+    ---------------------------
+    13. strong number
+    -----------------
+    14) fib sequence
+    ----------------
+    15) trib sequence
+    ------------------
+
+02 Array
