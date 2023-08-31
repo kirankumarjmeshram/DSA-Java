@@ -1,4 +1,4 @@
-import java.util.Stack;
+import java.util.*;
 //case1: general implementation 
 public class StackPredefinedLibrary {
     public static void main(String[] args) 
@@ -31,7 +31,7 @@ public class StackPredefinedLibrary {
 class StringObjInStack {
    
     public static void main(String[] args) {
-         Stack s = new Stack<String>();
+        Stack s = new Stack<String>();
          System.out.println(s);//[]
 		s.push("AAA");
 		s.push("BBB");
