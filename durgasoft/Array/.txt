@@ -185,3 +185,27 @@ Ex:
 		a[2] ----> 3
 		a[3] ----> 4
 		a[4] ----> Runtime Error
+
+
+Note: What is the difference between length and length()?
+	length -----> it is an identifier applicable only for array, size of array
+	length() ---> it is a method applicable only for strings, size of string
+ 
+The following are the different input functions existed in java.
+
+1) BufferedReader ----> char and Strings
+2) Console -----------> string and passwords
+3) Scanner -----------> all primitives and strings
+
+Scanner obj = new Scanner(System.in);
+	integer ----> obj.nextInt();
+	double -----> obj.nextDouble();
+	boolean ----> obj.nextBoolean();
+	String -----> obj.next() and obj.nextLine()
+
+The following are the various methods which are used to display the elements in an array
+	1) index concept
+	2) while loop
+	3) for loop
+	4) for each loop
+	5) toString()
