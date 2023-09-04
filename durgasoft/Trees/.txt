@@ -1,0 +1,119 @@
+==> It is non linear data structure.
+==> best suitable ds for search operations.
+==> hierarchical represenation of data.
+
+Ex: Banking System, Software, FileSystem, Family Tree etc
+
+a tree is a finate set of one or more nodes such that
+
+1. there is a specially desinged node called ROOT.
+2. remaining nodes are partitioned into n>=0, disjoint sets, called as sub-trees
+
+TREE TERMINOLOGIES
+------------------
+
+Root:
+-----
+It is a unique node, which is not having incoming edges.
+
+Example: A
+
+Node:
+-----
+It is a fundamental part of a tree, each node has two pointers one is pointing to left sub-tree and another one is pointing to the right sub-tree.
+
+Examples: A,B,C,D,E,F,G,H,I,J,K,L
+
+Edge:
+-----
+It is fundamental part of tree, used to connect two nodes.
+
+Examples: AB, AC, BD, BE, BF, CG, CH, DI, DJ, FK, HL
+
+Path:
+-----
+An ordered list of nodes, that are connected by edges called as path
+
+Ex: AL ---> AC, CH, HL
+
+Leaf Nodes:
+-----------
+The nodes which are not having any children or outgoining edges.
+
+Ex: I, J, E, K, G, L
+
+height of the tree:
+-------------------
+Height of the tree is number of edges on the longest path root to leaf.
+
+Ex: 3
+
+Level of the tree:
+------------------
+The level of tree or node is the number of edges on the path from root to that node.
+
+Ex: 
+    0 => A
+    1 => B & C
+    2 => D E F G & H
+    3 => I J K & L
+
+Parent:
+-------
+Node is said to be parent if it is linked with out going edges.
+
+Ex: A, B, C, D, F, H
+
+Child:
+------
+Node is said to be child if it is having incoming edges.
+
+Ex: B C D E F G H I J K L
+
+Sblings:
+--------
+Nodes which are children of same parent is called as siblings.
+
+Ex: bc, def, gh, ij
+
+ancestor:
+---------
+a node which is reachable through repeated moving from child to parent.
+
+Ex: L ---> H, C, A
+
+Degree or the node:
+-------------------
+The number of sub-trees attached to that node is called as Degree of the node
+
+Degree of the tree:
+-------------------
+The max degree of the node present in the tree is called as degree of tree
+
+Ex: D(Tree) = 3
+
+PREDECESSOR:
+------------
+While traversing or displaying a tree, if a node occurrs previous to some other node, then that node is called as predecessor.
+
+Ex: DEF predecessor of E is D
+
+SUCESSOR:
+---------
+While traversing or displaying a tree, if a node occurrs after to some other node, then that node is called as successor.
+
+Ex: DEF successor of E is F
+
+
+BINARY TREE
+-----------
+a binary tree is a type of tree in which each node has atmost two children. that is zero or one child or two children. first child is called as left-child and second child is called as right-child.
+
+Example: Digaram
+
+Properties of Binary Tree:
+--------------------------
+1. max number of nodes on level i of binary tree is 2^i.
+2. there should be exactly one path should be there from root to any node.
+3. tree with 'N' nodes has exactly 'N-1' edges connecting these nodes.
+4. the hegiht of the binary tree is logN
