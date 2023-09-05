@@ -1,6 +1,7 @@
 /**
  * StackArray
  */
+//1. implementation of stack using arrays.
 public class StackArray {
     int size;
     int[] data;

@@ -117,3 +117,12 @@ Properties of Binary Tree:
 2. there should be exactly one path should be there from root to any node.
 3. tree with 'N' nodes has exactly 'N-1' edges connecting these nodes.
 4. the hegiht of the binary tree is logN
+
+
+binary tree traversals (inorder,preorder,postorder)
+---------------------------------------------------
+Traversing means visiting each node present inside a tree, There are three types of methods are existed to visiting Tree.
+
+1) Inorder -----> Left, Root, Right
+2) Preorder ----> Root, Left, Right
+3) Postoder ----> Left, Right, Root
