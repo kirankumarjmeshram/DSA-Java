@@ -208,4 +208,4 @@ The following are the various methods which are used to display the elements in 
 	2) while loop
 	3) for loop
 	4) for each loop
-	5) toString()
+	5) toString() : Arrays.toString(array) ====> [obj1, obj2, obj3, obj4, obj5]

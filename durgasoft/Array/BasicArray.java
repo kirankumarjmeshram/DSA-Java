@@ -1,6 +1,8 @@
-package durgasoft.Array;
+import java.util.Arrays;
+import java.util.Scanner;
 
-class BasicArray {
+class BasicArray 
+{
     public static void main(String[] args) {
         int[] a ={11, 22, 33};
         System.out.println(a[0]); //11
@@ -24,5 +26,19 @@ class BasicArray {
 			System.out.println(item);
 		}
 
+        Scanner obj = new Scanner(System.in);
+
+		int e[] = new int[4];
+        System.out.println("add number");
+		e[0] = obj.nextInt();
+		e[1] = obj.nextInt();
+		e[2] = obj.nextInt();
+		e[3] = obj.nextInt();
+
+        System.out.println("toString: "+ e);//toString: [I@4f3f5b24
+        System.out.println("toString: "+ Arrays.toString(e));//toString: [12, 33, 44, 55]
+        
+
     }
 }
+
